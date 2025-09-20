@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <link rel="stylesheet" href="main_styles.css" />
+    <meta charset="utf-8"                  <a href="https://www.instagram.com/khadamat_nbc/#" target="_blank">
+                    <img class="social-icon" src="assets/icons8-x 9.svg" alt="Social Media 2" />
+                  </a>/>
+    <script src="script.js" defer></script>
+    <style>
+      /* Additional styles for functional inputs */
+      /* Keep the outer boxes exactly like the Figma/first file */
+.frame-20,
+.frame-25 {
+  /* these should already be in your style.css; keep whatever heights it defines */
+  box-sizing: border-box;
+  /* if your first file had padding, put it here, not on the inputs */
+  padding: 12px 16px; /* tweak to match the first design’s spacing */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Inputs should not add extra padding/height beyond the container */
+.frame-20 input,
+.frame-25 textarea {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  padding: 0;                 /* important: let the container handle spacing */
+  margin: 0;
+  box-sizing: border-box;
+  direction: rtl;
+  text-align: right;
+
+  /* match typography from the first file */
+  font-family: var(--body-font-family);
+  font-weight: var(--body-font-weight);
+  font-size: var(--body-font-size);
+  line-height: var(--body-line-height);
+  letter-spacing: var(--body-letter-spacing);
+  color: var(--textin-field);
+}
+
+/* If your first design used a fixed height for the textarea area,
+   let the container control it, not the element */
+.frame-25 {
+  /* example only; keep whatever the first file defines */
+  /* height: 160px; */
+}
+.frame-25 textarea {
+  resize: none;
+  min-height: 0;  /* don't fight the container's height */
+}
+
+/* File area: keep overlayed input from changing size */
+.frame-24 {
+  position: relative;
+  overflow: hidden;
+}
+.frame-24 input[type="file"] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="join-us" data-model-id="187:3629">
+      <div class="div">
+        <footer class="footer">
+          <div class="frame">
+            <div class="frame-2">
+              <div class="frame-3">
+                <div class="frame-4">
+                  <div class="group"><div class="text-wrapper">Contact Us</div></div>
+                  <div class="frame-5">
+                    <div class="frame-6">
+                      <div class="text-wrapper-2">info@battariat.com</div>
+                      <div class="mail">
+                        <div class="overlap-group-wrapper">
+                          <div class="overlap-group">
+                            <img class="vector" src="https://c.animaapp.com/HeuRXgjs/img/vector-1.svg" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="frame-6">
+                      <div class="text-wrapper-3">800 124 0430</div>
+                      <div class="vector-wrapper">
+                        <img class="img" src="https://c.animaapp.com/HeuRXgjs/img/vector-2.svg" />
+                      </div>
+                    </div>
+                    <div class="frame-6">
+                      <p class="text-wrapper-3">P.O.BOX 177, RIYADH-11383. SAUDI ARABIA</p>
+                      <div class="vector-wrapper">
+                        <img class="vector-2" src="https://c.animaapp.com/HeuRXgjs/img/vector-3.svg" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="frame-7">
+                  <div class="div-wrapper"><div class="text-wrapper">Privacy</div></div>
+                  <div class="frame-5">
+                    <div class="text-wrapper-4">Terms of Use</div>
+                    <div class="text-wrapper-5">Warranty</div>
+                  </div>
+                </div>
+                <div class="frame-7">
+                  <div class="frame-5">
+                    <div class="div-wrapper"><div class="text-wrapper">Important Links</div></div>
+                    <div class="text-wrapper-5">About Us</div>
+                    <div class="text-wrapper-5">Our Products</div>
+                    <div class="text-wrapper-6">Website</div>
+                    <div class="text-wrapper-5">News</div>
+                  </div>
+                </div>
+              </div>
+              <div class="frame-8">
+                <div class="frame-8">
+                  <div class="logo"></div>
+                  <p class="p">
+                    Since 1995, we have provided high-quality batteries that meet customer needs, with a commitment to innovation and quality. We are proud of our customers’ trust and our prestigious awards, and we work to align with Vision 2030 and strengthen Saudi industry.
+                  </p>
+                </div>
+                <div class="social-icons-container">
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/share/16Fgi9BbZA/?mibextid=wwXIfr" target="_blank" style="text-decoration: none; display: inline-block;">
+                  <img class="social-icon" src="assets/icons8-x 1.svg" alt="Snapchat" />
+                </a>
+
+                <!-- Instagram (already working) -->
+                <a href="https://www.instagram.com/khadamat_nbc/#" target="_blank" style="text-decoration: none; display: inline-block;">
+                  <img class="social-icon" src="assets/icons8-x 9.svg" alt="Instagram" />
+                </a>
+
+                <!-- X / Twitter (already working) -->
+                <a href="https://x.com/khadamat_nbc" target="_blank" style="text-decoration: none; display: inline-block;">
+                  <img class="social-icon" src="assets/icons8-x 2.svg" alt="Twitter (X)" />
+                </a>
+
+                <!-- YouTube -->
+                <a href="https://youtube.com/@khadamat_nbc?si=58Pkq3guzq7RkAov" target="_blank" style="text-decoration: none; display: inline-block;">
+                  <img class="social-icon" src="assets/icons8-x 7.svg" alt="YouTube" />
+                </a>
+
+                <!-- Threads -->
+                <a href="https://www.threads.com/@khadamat_nbc?igshid=NTc4MTIwNjQ2YQ==" target="_blank" style="text-decoration: none; display: inline-block;">
+                  <img class="social-icon" src="assets/icons8-x 3.svg" alt="Facebook" />
+                </a>
+
+                <!-- TikTok (already working) -->
+                <a href="https://www.tiktok.com/@khadamat_nbc" target="_blank" style="text-decoration: none; display: inline-block;">
+                  <img class="social-icon" src="assets/icons8-x 4.svg" alt="TikTok" />
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/company/national-batteries-company/" target="_blank" style="text-decoration: none; display: inline-block;">
+                  <img class="social-icon" src="assets/icons8-x 6.svg" alt="LinkedIn" />
+                </a>
+
+                <!-- Snapchat -->
+                <a href="https://t.snapchat.com/OnNynO8M" target="_blank" style="text-decoration: none; display: inline-block;">
+                  <img class="social-icon" src="assets/icons8-x 8.svg" alt="Threads" />
+                </a>
+
+                <!-- Pinterest -->
+                <a href="https://pin.it/4ZWBkLBi7" target="_blank" style="text-decoration: none; display: inline-block;">
+                  <img class="social-icon" src="assets/icons8-x 5.svg" alt="Pinterest" />
+                </a>
+              </div>
+              </div>
+            </div>
+            <div class="frame-10">
+              <img class="line" src="https://c.animaapp.com/HeuRXgjs/img/line-1.svg" />
+              <p class="text-wrapper-7">© All rights reserved to National Batteries Company</p>
+            </div>
+          </div>
+        </footer>
+        <div class="frame-11">
+          <div class="frame-12"><div class="text-wrapper-8"> Careers</div></div>
+          <div class="frame-13">
+            <div class="vector-wrapper">
+              <img class="vector-3" src="https://c.animaapp.com/HeuRXgjs/img/vector-4.svg" />
+            </div>
+            <div class="text-wrapper-9">Home</div>
+          </div>
+        </div>
+        <div class="overlap">
+          <div class="frame-wrapper">
+            <div class="frame-14">
+              <div class="untitled-recovered"></div>
+              <div class="frame-15">
+                <div class="frame-4"><div class="text-wrapper-10">Join Us</div></div>
+                <form class="frame-16" id="job-application-form">
+                  <div class="frame-17">
+                    <div class="frame-18">
+                      <div class="frame-19">
+                        <div class="text-wrapper-11">Last Name</div>
+                        <div class="frame-20">
+                          <input type="text" name="lastName" placeholder="Enter your last name" required />
+                        </div>
+                      </div>
+                      <div class="frame-19">
+                        <div class="text-wrapper-11">First Name</div>
+                        <div class="frame-20">
+                          <input type="text" name="firstName" placeholder="Enter your first name" required />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="frame-21">
+                      <div class="frame-19">
+                        <div class="text-wrapper-11">Email</div>
+                        <div class="frame-20">
+                          <input type="email" name="email" placeholder="Enter your email" required />
+                        </div>
+                      </div>
+                      <div class="frame-19">
+                        <div class="text-wrapper-11">Phone Number</div>
+                        <div class="frame-20">
+                          <input type="tel" name="phone" placeholder="+966 xxx xxxx xxx" required />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="frame-22">
+                      <div class="text-wrapper-11">Position</div>
+                      <div class="frame-20">
+                        <input type="text" name="position" placeholder="Enter your position" required />
+                      </div>
+                    </div>
+                    <div class="frame-23">
+                      <div class="text-wrapper-14">Attach your CV *</div>
+                      <div class="frame-24">
+                        <input type="file" name="cv" accept=".pdf,.doc,.docx" required />
+                        <div class="group-2">
+                          <div class="overlap-group-2">
+                            <img class="vector-4" src="https://c.animaapp.com/HeuRXgjs/img/vector-5.svg" />
+                            <img class="vector-5" src="https://c.animaapp.com/HeuRXgjs/img/vector-6.svg" />
+                          </div>
+                        </div>
+                        <div class="text-wrapper-15" id="file-name">Upload your CV</div>
+                      </div>
+                    </div>
+                    <div class="frame-22">
+                      <div class="text-wrapper-11">Cover Letter</div>
+                      <div class="frame-25">
+                        <textarea name="coverLetter" placeholder="Cover Letter"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                  <button type="submit" class="submit-btn">Submit Application</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <img class="rectangle" src="https://c.animaapp.com/HeuRXgjs/img/rectangle-199.png" />
+        </div>
+        <header class="header">
+          <div class="frame-26">
+            <div class="frame-13">
+              <div class="frame-27"><a href="https://store.khadamat.com.sa/" target="_blank"><div class="text-wrapper-16">Online Store</div></a></div>
+              <div class="frame-28">
+                <div class="frame-29"><div class="text-wrapper-17">EN</div></div>
+                <div class="arrow"><img class="vector-6" src="https://c.animaapp.com/HeuRXgjs/img/vector-7.svg" /></div>
+              </div>
+            </div>
+            <div class="frame-30">
+              <div class="frame-31">
+                <a href="index.html"
+                  >                <div class="frame-32 active"><div class="text-wrapper-18">Careers</div></div></a
+                >
+                <div class="frame-33">
+                  <div class="text-wrapper-19">Contact Us</div>
+                  <div class="rectangle-2"></div>
+                </div>
+                <div class="frame-34">
+                  <div class="frame-35"><div class="text-wrapper-20">News</div></div>
+                </div>
+                <div class="frame-36"><div class="text-wrapper-21">Our Products</div></div>
+                <div class="frame-37"><div class="text-wrapper-22">About Us</div></div>
+                <div class="frame-38"><div class="text-wrapper-23">Home</div></div>
+              </div>
+              <a href="index.html"><img class="untitled" src="https://c.animaapp.com/HeuRXgjs/img/untitled-10-2@2x.png" /></a>
+            </div>
+          </div>
+        </header>
+      </div>
+    </div>
+
+    <script>
+      // File upload handler
+      const fileInput = document.querySelector('input[type="file"]');
+      const fileName = document.getElementById('file-name');
+      
+      fileInput.addEventListener('change', function(e) {
+        if (e.target.files.length > 0) {
+          fileName.textContent = e.target.files[0].name;
+        } else {
+          fileName.textContent = 'Upload your CV';
+        }
+      });
+
+      // Form submission handler
+      document.getElementById('job-application-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const formData = new FormData(this);
+        const data = {
+          firstName: formData.get('firstName'),
+          lastName: formData.get('lastName'),
+          email: formData.get('email'),
+          phone: formData.get('phone'),
+          position: formData.get('position'),
+          cv: formData.get('cv'),
+          coverLetter: formData.get('coverLetter')
+        };
+        
+        console.log('Job application submitted:', data);
+        alert('Your job application was submitted successfully!');
+        
+        // Here you would typically send the data to your server
+        // fetch('/submit-job-application', { method: 'POST', body: formData })
+      });
+    </script>
+  </body>
+</html>

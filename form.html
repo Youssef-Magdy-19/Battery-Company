@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="utf-8" />
+    <title>نموذج تسجيل الضمان</title>
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="form_style.css" />
+<script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="frame" data-model-id="92:2171">
+      <header class="div">
+        <div class="div-2">
+          <img
+            class="image"
+            src="https://c.animaapp.com/WlhlXsd3/img/image-10@2x.png"
+            alt="شعار الشركة الوطنية لصناعة البطاريات"
+          />
+          <img
+            class="untitled"
+            src="https://c.animaapp.com/WlhlXsd3/img/untitled-10-1@2x.png"
+            alt="شعار أرامكو السعودية"
+          />
+        </div>
+        <img class="line" src="https://c.animaapp.com/WlhlXsd3/img/line-4.svg" alt="" role="presentation" />
+      </header>
+      <h1 class="text-wrapper">نموذج تسجيل الضمان</h1>
+      <form class="warranty-form" novalidate>
+        <div class="div-3">
+          <label for="full-name" class="p">
+            <span class="span">الاسم بالكامل </span>
+            <span class="text-wrapper-2" aria-label="حقل مطلوب">*</span>
+          </label>
+          <div class="div-wrapper">
+            <input
+              type="text"
+              id="full-name"
+              name="fullName"
+              placeholder="ادخل اسمك بالكامل"
+              required
+              aria-describedby="full-name-error"
+            />
+          </div>
+          <div id="full-name-error" class="error-message" aria-live="polite"></div>
+        </div>
+        <div class="div-3">
+          <label for="phone-number" class="p">
+            <span class="span">رقم الجوال </span>
+            <span class="text-wrapper-2" aria-label="حقل مطلوب">*</span>
+          </label>
+          <div class="div-wrapper">
+            <input
+              type="tel"
+              id="phone-number"
+              name="phoneNumber"
+              placeholder="966XXXXXXXXX+"
+              required
+              pattern="^\+966[0-9]{9}$"
+              aria-describedby="phone-number-error"
+            />
+          </div>
+          <div id="phone-number-error" class="error-message" aria-live="polite"></div>
+        </div>
+        <div class="div-3">
+          <label for="city" class="p">
+            <span class="span">المدينة </span>
+            <span class="text-wrapper-2" aria-label="حقل مطلوب">*</span>
+          </label>
+          <div class="div-wrapper">
+            <input
+              type="text"
+              id="city"
+              name="city"
+              placeholder="ادخل المدينة"
+              required
+              aria-describedby="city-error"
+            />
+          </div>
+          <div id="city-error" class="error-message" aria-live="polite"></div>
+        </div>
+        <div class="div-3">
+          <label for="email" class="text-wrapper-5">البريد الألكتروني</label>
+          <div class="div-wrapper">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="ادخل بريدك الألكتروني"
+              aria-describedby="email-error"
+            />
+          </div>
+          <div id="email-error" class="error-message" aria-live="polite"></div>
+        </div>
+        <div class="div-3">
+          <label for="distributor" class="p">
+            <span class="span">الموزع المعتمد الذي تم الشراء منه </span>
+            <span class="text-wrapper-2" aria-label="حقل مطلوب">*</span>
+          </label>
+          <div class="div-wrapper">
+            <input
+              type="text"
+              id="distributor"
+              name="distributor"
+              placeholder="ادخل اسمك الموزع"
+              required
+              aria-describedby="distributor-error"
+            />
+          </div>
+          <div id="distributor-error" class="error-message" aria-live="polite"></div>
+        </div>
+        <div class="div-3">
+          <label for="battery-serial" class="p">
+            <span class="span">رقم البطارية التسلسلي </span>
+            <span class="text-wrapper-2" aria-label="حقل مطلوب">*</span>
+          </label>
+          <div class="div-wrapper">
+            <input
+              type="text"
+              id="battery-serial"
+              name="batterySerial"
+              placeholder="xxxxxx"
+              required
+              aria-describedby="battery-serial-error"
+            />
+          </div>
+          <div id="battery-serial-error" class="error-message" aria-live="polite"></div>
+        </div>
+        <div class="div-3">
+          <label for="purchase-date" class="p">
+            <span class="span">تاريخ الشراء </span>
+            <span class="text-wrapper-2" aria-label="حقل مطلوب">*</span>
+          </label>
+          <div class="div-wrapper">
+            <input
+              type="date"
+              id="purchase-date"
+              name="purchaseDate"
+              required
+              aria-describedby="purchase-date-error"
+            />
+          </div>
+          <div id="purchase-date-error" class="error-message" aria-live="polite"></div>
+        </div>
+        <div class="div-4">
+          <label for="invoice-image" class="text-wrapper-7">صوره الفاتورة</label>
+          <div class="div-wrapper-2">
+            <input
+              type="file"
+              id="invoice-image"
+              name="invoiceImage"
+              accept="image/*,.pdf"
+              class="file-input"
+              aria-describedby="invoice-image-error"
+            />
+            <span class="text-wrapper-8">Choose file</span>
+          </div>
+          <div id="invoice-image-error" class="error-message" aria-live="polite"></div>
+        </div>
+        <div class="div-5">
+          <button type="submit" class="div-wrapper-3">
+            <span class="text-wrapper-9">إرسال</span>
+          </button>
+          <button type="button" class="div-wrapper-4" id="cancelButton">
+            <span class="text-wrapper-10">إلغاء</span>
+          </button>
+        </div>
+      </form>
+    </main>
+
+    <script>
+      // Handle the cancel button click
+      document.getElementById('cancelButton').addEventListener('click', function() {
+        // Send message to parent window to close the modal
+        window.parent.postMessage('closeModal', '*');
+      });
+    </script>
+  </body>
+</html>

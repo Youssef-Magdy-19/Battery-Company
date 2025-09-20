@@ -1,0 +1,153 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap");
+@font-face {
+  font-family: "DIN Next LT Arabic-Regular";
+  src: url("https://anima-uploads.s3.amazonaws.com/5c51504ce900f8000a90a732/Linotype - DIN Next LT Arabic Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --blue-100: rgba(255, 255, 255, 1);
+  --blue-200: rgba(205, 206, 229, 1);
+  --blue-300: rgba(114, 134, 188, 1);
+  --blue-400: rgba(73, 108, 173, 1);
+  --blue-500: rgba(0, 86, 160, 1);
+  --body-bold-font-family: "Cairo", Helvetica;
+  --body-bold-font-size: 16px;
+  --body-bold-font-style: normal;
+  --body-bold-font-weight: 700;
+  --body-bold-letter-spacing: 0px;
+  --body-bold-line-height: 120.00000476837158%;
+  --body-font-family: "Cairo", Helvetica;
+  --body-font-size: 18px;
+  --body-font-style: normal;
+  --body-font-weight: 400;
+  --body-letter-spacing: 0px;
+  --body-line-height: 120.00000476837158%;
+  --caption-bold-font-family: "Cairo", Helvetica;
+  --caption-bold-font-size: 10px;
+  --caption-bold-font-style: normal;
+  --caption-bold-font-weight: 700;
+  --caption-bold-letter-spacing: 0px;
+  --caption-bold-line-height: 120.00000476837158%;
+  --caption-font-family: "Cairo", Helvetica;
+  --caption-font-size: 10px;
+  --caption-font-style: normal;
+  --caption-font-weight: 400;
+  --caption-letter-spacing: 0px;
+  --caption-line-height: 120.00000476837158%;
+  --details-bold-font-family: "Cairo", Helvetica;
+  --details-bold-font-size: 13px;
+  --details-bold-font-style: normal;
+  --details-bold-font-weight: 700;
+  --details-bold-letter-spacing: 0px;
+  --details-bold-line-height: 120.00000476837158%;
+  --details-font-family: "Cairo", Helvetica;
+  --details-font-size: 13px;
+  --details-font-style: normal;
+  --details-font-weight: 400;
+  --details-letter-spacing: 0px;
+  --details-line-height: 120.00000476837158%;
+  --drop-shadow: 0px 5px 10px 0px rgba(36, 36, 36, 0.2);
+  --drop-shadow-100: 0px 1px 4px 0px rgba(12, 12, 13, 0.05);
+  --drop-shadow-200: 0px 1px 4px 0px rgba(12, 12, 13, 0.05), 0px 1px 4px 0px
+    rgba(12, 12, 13, 0.1);
+  --drop-shadow-300: 0px 4px 4px -1px rgba(12, 12, 13, 0.05), 0px 4px 4px -1px
+    rgba(12, 12, 13, 0.1);
+  --green-300: rgba(119, 192, 67, 1);
+  --header-bold-font-family: "Cairo", Helvetica;
+  --header-bold-font-size: 31px;
+  --header-bold-font-style: normal;
+  --header-bold-font-weight: 700;
+  --header-bold-letter-spacing: 0px;
+  --header-bold-line-height: 120.00000476837158%;
+  --header-font-family: "Cairo", Helvetica;
+  --header-font-size: 31px;
+  --header-font-style: normal;
+  --header-font-weight: 400;
+  --header-letter-spacing: 0px;
+  --header-line-height: 120.00000476837158%;
+  --heavenly-500: rgba(50, 177, 230, 1);
+  --main-shadows: 0px 8px 35px 0px rgba(106, 162, 203, 0.15);
+  --neutral-0: rgba(255, 255, 255, 1);
+  --neutral-100: rgba(247, 247, 247, 1);
+  --neutral-200: rgba(209, 211, 213, 1);
+  --neutral-300: rgba(153, 158, 161, 1);
+  --neutral-400: rgba(117, 117, 117, 1);
+  --neutral-500: rgba(75, 75, 75, 1);
+  --neutral-900: rgba(27, 27, 27, 1);
+  --otherbackground-white: rgba(255, 255, 255, 1);
+  --primary-orouba: rgba(3, 82, 151, 1);
+  --primary60-blue: rgba(61, 184, 245, 1);
+  --red-400: rgba(241, 92, 66, 1);
+  --red-500: rgba(237, 33, 38, 1);
+  --sub-bold-font-family: "Cairo", Helvetica;
+  --sub-bold-font-size: 20px;
+  --sub-bold-font-style: normal;
+  --sub-bold-font-weight: 700;
+  --sub-bold-letter-spacing: 0px;
+  --sub-bold-line-height: 120.00000476837158%;
+  --sub-title-font-family: "Cairo", Helvetica;
+  --sub-title-font-size: 20px;
+  --sub-title-font-style: normal;
+  --sub-title-font-weight: 400;
+  --sub-title-letter-spacing: 0px;
+  --sub-title-line-height: 120.00000476837158%;
+  --textbody: rgba(128, 128, 128, 1);
+  --textin-field: rgba(204, 204, 204, 1);
+  --texttitle: rgba(46, 46, 46, 1);
+  --textwhite: rgba(255, 255, 255, 1);
+  --title-font-family: "Cairo", Helvetica;
+  --title-font-size: 25px;
+  --title-font-style: normal;
+  --title-font-weight: 400;
+  --title-letter-spacing: 0px;
+  --title-line-height: 120.00000476837158%;
+  --titlebold-font-family: "Cairo", Helvetica;
+  --titlebold-font-size: 25px;
+  --titlebold-font-style: normal;
+  --titlebold-font-weight: 700;
+  --titlebold-letter-spacing: 0px;
+  --titlebold-line-height: 120.00000476837158%;
+  --white: rgba(255, 255, 255, 1);
+}
+
+/* Base + typography bound to tokens */
+*, *::before, *::after { box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+html { -webkit-text-size-adjust: 100%; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: var(--body-font-family);
+  font-weight: var(--body-font-weight);
+  font-size: var(--body-font-size);
+  line-height: var(--body-line-height);
+  letter-spacing: var(--body-letter-spacing);
+  color: var(--neutral-900, #1b1b1b);
+}
+a { text-decoration: none; color: inherit; }
+button:focus-visible { outline: 2px solid #4a90e2 !important; outline: -webkit-focus-ring-color auto 5px !important; }
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  font-family: var(--header-font-family);
+  font-weight: var(--header-font-weight);
+  line-height: var(--header-line-height);
+  letter-spacing: var(--header-letter-spacing);
+}
+/* Direction-aware base */
+html[dir="rtl"] body { direction: rtl; }
+html[dir="ltr"] body { direction: ltr; }
+
+/* Prefer logical alignments so both RTL/LTR work */
+:root {
+  /* When updating legacy CSS, prefer these logical properties: 
+     - margin-inline, padding-inline, inset-inline, border-inline, float: inline-start/end
+     - text-align: start/end
+  */
+}
+
+/* Example: partners strip scroll direction (optional) */
+html[dir="ltr"] .home-partners__strip { direction: ltr; }
+html[dir="rtl"] .home-partners__strip { direction: rtl; }

@@ -1,0 +1,223 @@
+.page-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.page-loader img {
+    width: 100px;
+    height: auto;
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Navigation hover effects */
+.navbar div, 
+.frame-19 div, 
+.frame-20 div, 
+.frame-21 div, 
+.frame-23 div, 
+.frame-24 div,
+.text-wrapper-12,
+.text-wrapper-13,
+.text-wrapper-21,
+.text-wrapper-22,
+.text-wrapper-23 {
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.navbar div:hover, 
+.frame-19 div:hover, 
+.frame-20 div:hover, 
+.frame-21 div:hover, 
+.frame-23 div:hover, 
+.frame-24 div:hover,
+.text-wrapper-12:hover,
+.text-wrapper-13:hover,
+.text-wrapper-21:hover,
+.text-wrapper-22:hover,
+.text-wrapper-23:hover {
+    color: #007bff;
+}
+
+/* Logo hover effect */
+.logo, .logo-2 {
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.logo:hover, .logo-2:hover {
+    opacity: 0.8;
+}
+
+/* Store button hover effect */
+.text-wrapper-10:hover, 
+.text-wrapper-2:hover {
+    opacity: 0.8;
+}
+
+/* Social media posts */
+.group-2,
+.group-3,
+.group-4,
+.group-5 {
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Dark overlay */
+.group-2::before,
+.group-3::before,
+.group-4::before,
+.group-5::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+/* Social elements initial state */
+.frame-29,
+.frame-7,
+.instagram,
+.rectangle-2 {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Position social elements */
+.frame-29,
+.frame-7 {
+    position: absolute;
+    top: 10px;
+    right: 40px;
+    display: flex;
+    gap: 10px;
+    z-index: 2;
+}
+
+.instagram {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 2;
+}
+
+/* Gradient overlay */
+.rectangle-2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40%;
+    background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+    z-index: 1;
+}
+
+/* Hover effects */
+.group-2:hover,
+.group-3:hover,
+.group-4:hover,
+.group-5:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.group-2:hover::before,
+.group-3:hover::before,
+.group-4:hover::before,
+.group-5:hover::before,
+.group-2:hover .frame-29,
+.group-3:hover .frame-29,
+.group-4:hover .frame-29,
+.group-5:hover .frame-29,
+.group-2:hover .frame-7,
+.group-3:hover .frame-7,
+.group-4:hover .frame-7,
+.group-5:hover .frame-7,
+.group-2:hover .instagram,
+.group-3:hover .instagram,
+.group-4:hover .instagram,
+.group-5:hover .instagram,
+.group-2:hover .rectangle-2,
+.group-3:hover .rectangle-2,
+.group-4:hover .rectangle-2,
+.group-5:hover .rectangle-2 {
+    opacity: 1;
+}
+
+/* Language switcher hover effect */
+.text-wrapper-11:hover {
+    opacity: 0.8;
+}
+
+/* Footer links hover effects */
+[class*="text-wrapper"] {
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+[class*="text-wrapper"]:hover {
+    color: #007bff;
+    transform: translateX(-5px);
+}
+
+/* Footer contact info specific styles */
+[class*="text-wrapper"][class*="phone"]:hover,
+[class*="text-wrapper"][class*="email"]:hover,
+[class*="text-wrapper"]:hover[href^="tel:"],
+[class*="text-wrapper"]:hover[href^="mailto:"] {
+    text-decoration: underline;
+    transform: none;
+}
+
+/* Disable hover effect for headers and titles */
+.text-wrapper-7,
+.text-wrapper-8,
+.text-wrapper-15,
+.text-wrapper-16,
+.text-wrapper-20,
+.text-wrapper-25,
+.text-wrapper-26,
+.text-wrapper-27 {
+    transform: none !important;
+}
+
+/* Footer contact info hover effects */
+.text-wrapper-15:hover,
+.text-wrapper-16:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,45 @@
+/* Clean social media posts styling */
+.social-posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.social-post {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-post img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Remove all hover effects and overlays */
+.social-post:hover {
+    transform: none;
+}
+
+.instagram,
+.overlay,
+.frame-28,
+.frame-29,
+.group-5,
+.rectangle-2,
+.comment,
+.text-wrapper-17,
+.text-wrapper-18 {
+    display: none !important;
+}
+
+/* Override any existing hover effects */
+.news .group-4 img:hover,
+.frame-5 img:hover,
+.frame-27 img:hover {
+    transform: none;
+    z-index: auto;
+}

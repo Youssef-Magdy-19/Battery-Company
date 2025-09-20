@@ -1,0 +1,80 @@
+
+/* layout.responsive.css
+   Purpose: Make existing pages fluid & centered without changing HTML.
+   Scope: Applies to known page roots: .home, .about-us, .contact-us, .new, .prouducts,
+          and the first top-level <div> as a fallback for pages like form.html.
+*/
+
+/* Prevent horizontal scroll from off-canvas elements */
+html, body { overflow-x: hidden; }
+
+/* Universal media behavior for images/embeds */
+img, svg, video { max-width: 100%; height: auto; display: block; }
+
+/* 1) Page root containers: fluid width & centered */
+.home,
+.about-us,
+.contact-us,
+.new,
+.prouducts {
+  width: min(1440px, 100%);
+  margin-inline: auto;
+  position: relative;
+  height: auto !important; /* unlock fixed canvases */
+  padding-inline: clamp(16px, 3vw, 32px);
+}
+
+/* Fallback: first top-level div becomes the fluid container (e.g., form.html) */
+body > div:first-of-type {
+  width: min(1440px, 100%);
+  margin-inline: auto;
+  position: relative;
+  height: auto !important;
+  padding-inline: clamp(16px, 3vw, 32px);
+}
+
+/* 2) Footer should flow at the end (not absolutely positioned) */
+.footer {
+  position: static !important;
+  inset: auto !important;
+  width: 100% !important;
+  margin-inline: auto;
+}
+
+/* 3) Common fixed widths on inner wrappers → let them shrink on mobile */
+.home .overlap-wrapper,
+.about-us .overlap-wrapper,
+.contact-us .overlap-wrapper,
+.new .overlap-wrapper,
+.prouducts .overlap-wrapper {
+  max-width: 100% !important;
+}
+
+.home .overlap,
+.about-us .overlap,
+.contact-us .overlap,
+.new .overlap,
+.prouducts .overlap {
+  max-width: 100% !important;
+}
+
+/* 4) Kill accidental huge min-widths that cause sideways scroll */
+[class*="frame-"],
+[class*="group"],
+[class*="overlap"],
+[class^="div"],
+[class*="wrapper"] {
+  min-width: 0;
+}
+
+/* 5) Responsive spacing helpers (optional, safe) */
+:root { --g1:.25rem; --g2:.5rem; --g3:1rem; --g4:1.5rem; --g5:2rem; }
+.stack > * + * { margin-block-start: var(--g3); }
+.flex { display: flex; gap: var(--g3); align-items: center; }
+.grid { display: grid; gap: var(--g3); }
+
+/* 6) Mobile-first media queries for future adjustments */
+@media (min-width: 640px) { /* sm */ }
+@media (min-width: 768px) { /* md */ }
+@media (min-width: 1024px) { /* lg */ }
+@media (min-width: 1280px) { /* xl */ }

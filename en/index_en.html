@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../globals.css" />
+  <link rel="stylesheet" href="../index_style.css" />
+  <link rel="stylesheet" href="../dynamic.css" />
+  <link rel="stylesheet" href="../all_styles.css" />
+  <link rel="stylesheet" href="../social-icons.css" />
+  <link rel="stylesheet" href="../dynamic-new.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<style>
+  /* دي شوية CSS صغيرة لتشكيلات الزوايا والدائرة الزرقاء */
+  .cut-shape {
+    /* يعطي شكل زاوية مقطوعة للخلفية الصغيرة */
+    border-radius: 18px 60px 18px 60px;
+    overflow: hidden;
+  }
+
+  .pill-cut {
+    border-radius: 28px;
+  }
+
+  /* الزرار الأحمر بالرمز */
+  .btn-pulse:after {
+    content: "↗";
+    display: inline-block;
+    transform: translateY(-1px);
+    margin-inline-start: 8px;
+    /* يضيف مسافة بعد النص في RTL */
+    opacity: 0.95;
+  }
+
+  /* تصغير الخط في الشاشات الصغيرة */
+  @media (max-width: 640px) {
+    .stat-number {
+      font-size: 1.6rem;
+    }
+
+    .hero-title {
+      font-size: 1.15rem;
+    }
+  }
+</style>
+
+<body class="bg-gray-100">
+
+  <header class="header absolute z-[10000]">
+    <div class="dddd flex justify-between items-center gap-[1rem] lg:w-[95%] xl:w-[90%] m-auto">
+      <div class="frame-13 hidden sm:flex items-center justify-start">
+        <div class="frame-16">
+          <div class="frame-17">
+            <div class="text-wrapper-11 text-white">AR</div>
+          </div>
+        </div>
+        <div class="frame-15 order-2">
+          <a href="https://store.khadamat.com.sa/" target="_blank">
+            <div class="text-wrapper-10 text-white">E-Store </div>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="block lg:hidden icon-menu cursor-pointer ml-[10px]">
+        <div class="w-[20px] h-[3px] bg-white mb-[5px]"></div>
+        <div class="w-[20px] h-[3px] bg-white mb-[5px]"></div>
+        <div class="w-[20px] h-[3px] bg-white mb-[5px]"></div>
+      </div>
+
+      <div class="navbar hidden lg:flex flex-row items-center gap-[1.25rem] ">
+        <div class="frame-24">
+          <a href="index.html">
+            <div class="text-wrapper-12 text-white mb-[5px]">Home</div>
+            <div class="rectangle"></div>
+          </a>
+        </div>
+        <div class="frame-20">
+          <a href="about_us.html">
+            <div class="text-wrapper-12 text-white">About Us</div>
+          </a>
+        </div>
+        <div class="frame-20">
+          <a href="products.html">
+            <div class="text-wrapper-12 text-white">Our Products</div>
+          </a>
+        </div>
+        <div class="frame-20">
+          <div class="frame-20">
+            <a href="new.html">
+              <div class="text-wrapper-14 text-white">News</div>
+            </a>
+          </div>
+        </div>
+        <a href="contact_us.html">
+          <div class="frame-20">
+            <div class="text-wrapper-12 text-white">Contact Us</div>
+          </div>
+        </a>
+        <div class="frame-20">
+          <a href="https://www.tasnee.com/en/contact-us/careers">
+          <div class="text-wrapper-12 text-white">Careers</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Side Bar -->
+      <nav class="nav w-[80%] left-[11%] mt-[-10px] py-[15px] px-[20px] rounded-2xl">
+        <ul class="flex flex-col gap-[1rem] justify-center items-center">
+          <li class="text-black link1"><a href="index.html">Home</a></li>
+          <li class="text-black link2"><a href="about_us.html">About Us</a></li>
+          <li class="text-black link3"><a href="products.html">Our Products</a></li>
+          <li class="text-black link4"><a href="new.html">News</a></li>
+          <li class="text-black link5"><a href="contact_us.html">Contact Us</a></li>
+          <li class="text-black link6"><a href="https://www.tasnee.com/en/contact-us/careers">Careers</a></li>
+          <div class="frame-13 flex sm:hidden">
+            <div class="frame-16">
+              <div class="arrow"><img class="vector-4" src="https://c.animaapp.com/ukyvrevr/img/vector-5.svg" /></div>
+              <div class="frame-17">
+                <div class="text-black">AR</div>
+              </div>
+            </div>
+            <div class="frame-15 order-2">
+              <a href="https://store.khadamat.com.sa/" target="_blank">
+                <div class="text-wrapper-10">E-Store </div>
+              </a>
+            </div>
+
+          </div>
+        </ul>
+      </nav>
+
+      <div class="header-logo">
+        <a href="index.html"><img class="untitled" src="https://c.animaapp.com/ukyvrevr/img/untitled-10-2@2x.png"
+            alt="logo" />
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Slider wrapper -->
+  <div id="slider" class="relative w-full mx-auto rounded-2xl overflow-hidden shadow-lg">
+    <!-- Slides -->
+    <div class="relative h-[620px]">
+      <img class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-100"
+           src="/../assets/banner.svg" alt="Banner 1">
+      <img class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-0 pointer-events-none"
+          src="../assets/banner2.svg" alt="Banner 2">
+    </div>
+
+    <!-- Left arrow -->
+    <button id="prevBtn"
+            class="absolute left-3 top-1/2 transform -translate-y-1/2 z-20 text-gray-100 hover:border hover:border-blue-500  p-2 rounded-full shadow backdrop-blur-sm">
+      <!-- small chevron left (RTL: appears on left) -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+
+    <!-- Right arrow -->
+    <button id="nextBtn"
+            class="absolute right-3 top-1/2 transform -translate-y-1/2 z-20 text-gray-100 hover:border hover:border-blue-500  p-2 rounded-full shadow backdrop-blur-sm">
+      <!-- small chevron right -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+
+    <div
+      class="frame-9 w-[80%] right-[10%] absolute top-[205px]  flex flex-col md:flex-row items-center justify-between gap-[2rem]">
+      <div class="">
+        <p class="text-wrapper-8">Saudi leadership in battery manufacturing</p>
+        <div class="frame-10 mt-[30px]">
+          <div class="vector-wrapper">
+            <img class="vector-2" src="https://c.animaapp.com/in0BC4Oq/img/vector-2.svg" />
+          </div>
+          <div class="text-wrapper-9">Discover our products </div>
+        </div>
+      </div>
+      <img class="hidden md:block w-[280px] h-[280px]"
+        src="https://c.animaapp.com/in0BC4Oq/img/472621177-608942485079693-2613384628443662180-n-1@2x.png" />
+    </div>
+
+    <!-- Optional small indicators (center bottom) -->
+    <div class="absolute left-1/2 transform -translate-x-1/2 bottom-4 z-20 flex gap-2">
+      <button class="indicator w-2 h-2 rounded-full bg-white/70" data-index="0"></button>
+      <button class="indicator w-2 h-2 rounded-full bg-white/30" data-index="1"></button>
+    </div>
+  </div>
+
+
+
+  <section class="mx-auto px-4 py-14">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+
+      <!-- right column - text + stats -->
+      <div class="right-col lg:col-span-6">
+        <div class="flex flex-col justify-center h-full">
+          <!-- Heading -->
+          <h2 class="hero-title text-right text-blue-500 font-extrabold text-3xl sm:text-4xl leading-tight">
+            We are proud to be part of the success story of<br />
+            <span class="text-blue-600">the Saudi industry </span> for more than 30 years
+            <span class="text-blue-400 block font-semibold text-md"></span>
+          </h2>
+
+          <!-- stats row -->
+          <div class="mt-8 flex items-center justify-start gap-8 items-center">
+            <!-- stat 1 -->
+            <div class="flex flex-col items-start">
+              <div class="stat-number text-4xl sm:text-5xl font-extrabold text-blue-600">30M+</div>
+              <div class="text-sm text-blue-500 mt-1 text-right">
+                Batteries manufactured inside the Kingdom
+              </div>
+            </div>
+
+            <!-- stat 2 -->
+            <div class="flex flex-col items-start">
+              <div class="stat-number text-4xl sm:text-5xl font-extrabold text-blue-600">60.5%</div>
+              <div class="text-sm text-blue-500 mt-1 text-right">
+                Percentage of local content in products
+              </div>
+            </div>
+          </div>
+
+          <!-- logos row -->
+          <div class="mt-8">
+            <img class="" src="../assets/Group (1).svg" />
+          </div>
+
+        </div>
+      </div>
+
+      <!-- left column - images & buttons -->
+      <div class="left-col lg:col-span-6">
+        <div class="flex flex-col sm:flex-row items-start justify-end sm:items-center gap-4">
+          <!-- Buttons -->
+          <div class="flex gap-3 order-1 sm:order-2">
+            <button class="pill-cut bg-red-500 text-white px-5 py-2 text-sm font-medium shadow-md btn-pulse">
+              About Us
+            </button>
+            <button
+              class="pill-cut bg-blue-600 text-white px-5 py-2 text-sm font-medium shadow-md flex items-center gap-2">
+              E-Store 
+              <!-- arrow left in RTL -->
+              <span class="text-white/90">↗</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- images stack -->
+        <div class="lg:mt-6 relative">
+          <div class="flex flex-col md:flex-row items-end  gap-4 items-stretch m-auto">
+            <div class="mt-auto relative img1-home">
+              <div
+                class="arrow-outward-wrapper w-[65px] h-[65px] md:w-[50px] md:h-[50px] lg:h-[35px] lg:w-[35px] absolute ml-[50px] mt-[-10px] lg:mt-[-10px]">
+              </div>
+              <!-- Banner Placeholder 1 -->
+              <img class="image md:w-[300px] md:h-[240px] lg:h-[210px] xl:w-[240px] xl:h-[250px] lg:ml-[-20px]"
+                src="https://c.animaapp.com/in0BC4Oq/img/image@2x.png" alt="Banner Placeholder 1" />
+            </div>
+            <img class="image-2 md:w-[450px] md:h-[270px] xl:w-[300px] xl:h-[290px] mt-[30px]"
+              src="https://c.animaapp.com/in0BC4Oq/img/image-1@2x.png" alt="Main Banner" />
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+  <section>
+    <div class="text-wrapper-21 py-[30px]">Our Partners</div>
+
+    
+    <div class="partners-strip top-[1990px] md:top-[1360px] lg:top-[1110px]" dir="rtl" aria-label="شريط شعارات الشركاء">
+      <div class="partners-track">
+       
+        <img src="../assets/111.svg" alt="Partner 1" />
+        <img src="../assets/Clip 2group.svg" alt="Partner 2" />
+        <img src="../assets/Clip 3group.svg" alt="Partner 3" />
+        <img src="../assets/Clip 4group.svg" alt="Partner 4" />
+        <img src="../assets/222.svg" alt="Partner 17" />
+        <img src="../assets/Clip 5group.svg" alt="Partner 5" />
+        <img src="../assets/Clip 6group.svg" alt="Partner 6" />
+        <img src="../assets/Clip 7group.svg" alt="Partner 7" />
+        <img src="../assets/Clip 16group.svg" alt="Partner 16" />
+        <img src="../assets/Clip 8group.svg" alt="Partner 8" />
+        <img src="../assets/Clip 9group.svg" alt="Partner 9" />
+        <img src="../assets/Clip 10group.svg" alt="Partner 10" />
+        <img src="../assets/Clip 11group.svg" alt="Partner 11" />
+        <img src="../assets/Clip 12group.svg" alt="Partner 12" />
+        <img src="../assets/Clip 13group.svg" alt="Partner 13" />
+        <img src="../assets/Clip 14group.svg" alt="Partner 14" />
+        <img src="../assets/Clip 15group.svg" alt="Partner 15" />
+      </div>
+
+      <div class="partners-track partners-track--b" aria-hidden="true">
+       
+        <img src="../assets/111.svg" alt="Partner 1" />
+        <img src="../assets/Clip 2group.svg" alt="" />
+        <img src="../assets/Clip 3group.svg" alt="" />
+        <img src="../assets/Clip 4group.svg" alt="" />
+        <img src="../assets/222.svg" alt="Partner 17" />
+        <img src="../assets/Clip 5group.svg" alt="" />
+        <img src="../assets/Clip 6group.svg" alt="" />
+        <img src="../assets/Clip 7group.svg" alt="" />
+        <img src="../assets/Clip 16group.svg" alt="" />
+        <img src="../assets/Clip 8group.svg" alt="" />
+        <img src="../assets/Clip 9group.svg" alt="" />
+        <img src="../assets/Clip 10group.svg" alt="" />
+        <img src="../assets/Clip 11group.svg" alt="" />
+        <img src="../assets/Clip 12group.svg" alt="" />
+        <img src="../assets/Clip 13group.svg" alt="" />
+        <img src="../assets/Clip 14group.svg" alt="" />
+        <img src="../assets/Clip 15group.svg" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="w-[94%] mx-auto mt-[300px] mb-[40px]">
+    <div class="flex justify-between items-center gap-5">
+      <div class="text-wrapper-6">News</div>
+      <a href="new.html" style="text-decoration: none; color: inherit;">
+        <div class="text-wrapper-5">View More</div>
+      </a>
+    </div>
+    <div class="mt-[25px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[.75rem]">
+      <div class="social-card  h-[370px] w-[100%] m-auto">
+        <img class="post-image" src="https://c.animaapp.com/gXlZRcOm/img/group-3555-2@2x.png" alt="Social Media Post" />
+        <div class="post-overlay">
+          <div class="overlay-header"><img class="social-icon"
+              src="https://c.animaapp.com/in0BC4Oq/img/instagram---167-.svg" alt="Instagram" /></div>
+          <div class="overlay-footer">
+            <p class="post-caption">On the occasion of the 8th Pledge of Allegiance, we renew our pledge and loyalty to His Highness the Crown Prince...</p>
+            <div class="post-stats">
+              <div class="stat"><img src="https://c.animaapp.com/in0BC4Oq/img/vector.svg" alt="Like" />
+                <span>3</span>
+              </div>
+              <div class="stat"><img src="https://c.animaapp.com/in0BC4Oq/img/vector-1.svg" alt="Comment" />
+                <span>1</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="social-card  h-[370px] w-[100%] m-auto">
+        <img class="post-image" src="https://c.animaapp.com/gXlZRcOm/img/group-3556-2@2x.png" alt="Social Media Post" />
+        <div class="post-overlay">
+          <div class="overlay-header"><img class="social-icon"
+              src="https://c.animaapp.com/in0BC4Oq/img/instagram---167-.svg" alt="Instagram" /></div>
+          <div class="overlay-footer">
+            <p class="post-caption">We share with you our pride in Saudi products that compete globally.</p>
+            <div class="post-stats">
+              <div class="stat"><img src="https://c.animaapp.com/in0BC4Oq/img/vector.svg" alt="Like" />
+                <span>5</span>
+              </div>
+              <div class="stat"><img src="https://c.animaapp.com/in0BC4Oq/img/vector-1.svg" alt="Comment" />
+                <span>2</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="social-card  h-[370px] w-[100%] h-[370px] w-[100%] m-auto">
+        <img class="post-image" src="https://c.animaapp.com/gXlZRcOm/img/group-3558-2@2x.png" alt="Social Media Post" />
+        <div class="post-overlay">
+          <div class="overlay-header"><img class="social-icon"
+              src="https://c.animaapp.com/in0BC4Oq/img/instagram---167-.svg" alt="Instagram" /></div>
+          <div class="overlay-footer">
+            <p class="post-caption">Our quality speaks for us — batteries that last and performance you can trust.</p>
+            <div class="post-stats">
+              <div class="stat"><img src="https://c.animaapp.com/in0BC4Oq/img/vector.svg" alt="Like" />
+                <span>8</span>
+              </div>
+              <div class="stat"><img src="https://c.animaapp.com/in0BC4Oq/img/vector-1.svg" alt="Comment" />
+                <span>4</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="social-card  h-[370px] w-[100%] m-auto">
+        <img class="post-image" src="https://c.animaapp.com/gXlZRcOm/img/image-22-2@2x.png" alt="Social Media Post" />
+        <div class="post-overlay">
+          <div class="overlay-header"><img class="social-icon"
+              src="https://c.animaapp.com/in0BC4Oq/img/instagram---167-.svg" alt="Instagram" /></div>
+          <div class="overlay-footer">
+            <p class="post-caption">From our factories in the Kingdom to all around the world. </p>
+            <div class="post-stats">
+              <div class="stat"><img src="https://c.animaapp.com/in0BC4Oq/img/vector.svg" alt="Like" />
+                <span>10</span>
+              </div>
+              <div class="stat"><img src="https://c.animaapp.com/in0BC4Oq/img/vector-1.svg" alt="Comment" />
+                <span>3</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+  <footer class="bg-[#0056a0]">
+    <div class="w-[94%] md:w-[90%] pt-[30px] m-auto text-white">
+      <div class="flex flex-col xl:flex-row gap-[1rem] items-start">
+        <div
+          class="div-links-footer xl:mt-[0px] grid gap-[2rem] m-auto text-center md:text-start grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <div class="flex flex-col gap-[1rem]">
+            <div class="group">
+              <div class="font-bold">Contact Us </div>
+            </div>
+            <div class="flex items-center gap-[.5rem]">
+              <div class="">
+                <img class="" src="https://c.animaapp.com/1lwzhgBv/img/vector-1.svg" />
+              </div>
+              <p class="m-auto md:m-0 text-sm hover:text-blue-500 hover:underline">info@battariat.com</p>
+            </div>
+            <div class="flex items-center gap-[.5rem] ">
+              <div class="">
+                <img src="https://c.animaapp.com/1lwzhgBv/img/vector-2.svg" />
+              </div>
+              <span class="m-auto md:m-0 text-sm hover:text-blue-500 hover:underline">800 124 0430</span>
+            </div>
+            <div class="flex items-center gap-[.5rem]">
+              <div class="">
+                <img src="https://c.animaapp.com/1lwzhgBv/img/vector-3.svg" />
+              </div>
+              <p class="m-auto md:m-0 text-sm hover:text-blue-500 hover:underline">P.O.BOX 177, RIYADH-11383. SAUDI
+                ARABIA</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-[1rem] m-auto lg:m-0">
+            <div class="font-bold">Privacy</div>
+            <div class="flex flex-col gap-[1rem]">
+              <div class="text-sm cursor-pointer hover:text-blue-500">Terms of Use </div>
+              <div class="text-sm cursor-pointer hover:text-blue-500">Warranty</div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-[1rem]">
+            <div class="">
+              <div class="text-white font-bold">Important Links </div>
+            </div>
+            <div class="text-sm cursor-pointer hover:text-blue-500">About Us </div>
+            <div class="text-sm cursor-pointer hover:text-blue-500">Our Products</div>
+            <div class="text-sm cursor-pointer hover:text-blue-500">Website </div>
+            <div class="text-sm cursor-pointer hover:text-blue-500">News</div>
+          </div>
+        </div>
+        <div class="mb-[20px] div-logo-footer">
+          <div
+            class="flex flex-col lg:flex-row xl:flex-col gap-[1rem] items-center justify-center lg:justify-between mt-[25px] xl:mt-[0] mb-[15px]">
+            <p class="p xl:w-[550px]">
+              Since 1995, we have been providing high-quality batteries that meet customer needs, with a commitment to
+              innovation and quality. We take pride in our customers’ trust, our prestigious awards, and our efforts to
+              align with Vision 2030 and enhance the Saudi industry
+            </p>
+            <div class="logo w-[100%] md:w-[600px] xl:w-[540px]"></div>
+          </div>
+          <div class="flex justify-center items-center gap-[1rem] mt-[1rem]">
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/share/16Fgi9BbZA/?mibextid=wwXIfr" target="_blank"
+              style="text-decoration: none; display: inline-block;">
+              <img class="social-icon" src="../../assets/icons8-x 1.svg" alt="Snapchat" />
+            </a>
+
+            <!-- Instagram (already working) -->
+            <a href="https://www.instagram.com/khadamat_nbc/#" target="_blank"
+              style="text-decoration: none; display: inline-block;">
+              <img class="social-icon" src="../../assets/icons8-x 9.svg" alt="Instagram" />
+            </a>
+
+            <!-- X / Twitter (already working) -->
+            <a href="https://x.com/khadamat_nbc" target="_blank" style="text-decoration: none; display: inline-block;">
+              <img class="social-icon" src="../../assets/icons8-x 2.svg" alt="Twitter (X)" />
+            </a>
+
+            <!-- YouTube -->
+            <a href="https://youtube.com/@khadamat_nbc?si=58Pkq3guzq7RkAov" target="_blank"
+              style="text-decoration: none; display: inline-block;">
+              <img class="social-icon" src="../../assets/icons8-x 7.svg" alt="YouTube" />
+            </a>
+
+            <!-- Threads -->
+            <a href="https://www.threads.com/@khadamat_nbc?igshid=NTc4MTIwNjQ2YQ==" target="_blank"
+              style="text-decoration: none; display: inline-block;">
+              <img class="social-icon" src="../../assets/icons8-x 3.svg" alt="Facebook" />
+            </a>
+
+            <!-- TikTok (already working) -->
+            <a href="https://www.tiktok.com/@khadamat_nbc" target="_blank"
+              style="text-decoration: none; display: inline-block;">
+              <img class="social-icon" src="../../../assets/icons8-x 4.svg" alt="TikTok" />
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/company/national-batteries-company/" target="_blank"
+              style="text-decoration: none; display: inline-block;">
+              <img class="social-icon" src="../../assets/icons8-x 6.svg" alt="LinkedIn" />
+            </a>
+
+            <!-- Snapchat -->
+            <a href="https://t.snapchat.com/OnNynO8M" target="_blank"
+              style="text-decoration: none; display: inline-block;">
+              <img class="social-icon" src="../../assets/icons8-x 8.svg" alt="Threads" />
+            </a>
+
+            <!-- Pinterest -->
+            <a href="https://pin.it/4ZWBkLBi7" target="_blank" style="text-decoration: none; display: inline-block;">
+              <img class="social-icon" src="../../assets/icons8-x 5.svg" alt="Pinterest" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="pt-[12px]">
+        <img class="line" src="https://c.animaapp.com/1lwzhgBv/img/line-1.svg" />
+        <p class="text-center py-[10px] hover:text-blue-500"> © All rights reserved to the National Batteries Company
+        </p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    (() => {
+      const LANG_KEY = 'site.lang';
+      const EN = 'EN', AR = 'AR';
+
+      // Detect English page by path
+      const isEnglishPath = (path) => /\/en\//.test(path) || /_en\.html$/i.test(path);
+
+      // Normalize to a file name like "index.html"
+      function getFile(pathOrHref) {
+        const p = (pathOrHref || location.pathname).split('?')[0].split('#')[0];
+        if (p.endsWith('/')) return 'index.html';
+        const name = p.substring(p.lastIndexOf('/') + 1) || 'index.html';
+        return name.includes('.') ? name : (name + '.html');
+      }
+
+      // Build URLs for the counterpart page
+      function toEnglishUrl(pathname) {
+        // e.g., /about_us.html -> /en/about_us_en.html
+        const file = getFile(pathname).replace(/\.html?$/i, '_en.html');
+        return '/en/' + file + location.search + location.hash;
+      }
+      function toArabicUrl(pathname) {
+        // e.g., /en/products_en.html -> /products.html
+        const file = getFile(pathname).replace(/_en\.html$/i, '.html');
+        return '/' + file + location.search + location.hash;
+      }
+
+      // Keep site in the user's stored preference
+      function enforcePreferredLanguage() {
+        const pref = localStorage.getItem(LANG_KEY);
+        const path = location.pathname;
+        if (pref === EN && !isEnglishPath(path)) location.replace(toEnglishUrl(path));
+        else if (pref === AR && isEnglishPath(path)) location.replace(toArabicUrl(path));
+      }
+
+      // Rewrite internal links (so the user stays in their chosen language)
+      function rewriteInternalLinks(lang) {
+        document.querySelectorAll('a[href]').forEach(a => {
+          const href = a.getAttribute('href');
+          if (!href || /^(https?:|mailto:|tel:|#|javascript:)/i.test(href)) return;
+
+          // Turn relative into absolute path-like for parsing
+          const asPath = href.startsWith('/') ? href : '/' + href;
+          const file = getFile(asPath);
+          if (!/\.html?$/i.test(file)) return; // only rewrite html pages
+
+          if (lang === EN) {
+            const enFile = file.endsWith('_en.html') ? file : file.replace(/\.html?$/i, '_en.html');
+            a.setAttribute('href', '/en/' + enFile);
+          } else {
+            const arFile = file.replace(/_en\.html$/i, '.html');
+            a.setAttribute('href', '/' + arFile);
+          }
+        });
+      }
+
+      // 1) Redirect early if current page doesn't match stored preference
+      enforcePreferredLanguage();
+
+      // 2) Wire everything after DOM is ready
+      document.addEventListener('DOMContentLoaded', () => {
+        const isEN = isEnglishPath(location.pathname);
+        // Persist current language
+        localStorage.setItem(LANG_KEY, isEN ? EN : AR);
+
+        // Make all .text-wrapper-11 act as toggles
+        document.querySelectorAll('.text-wrapper-11').forEach(el => {
+          // Accessibility + UX
+          el.setAttribute('role', 'button');
+          el.setAttribute('tabindex', '0');
+          el.style.cursor = 'pointer';
+
+          // Show the *other* language (the action you'll perform)
+          el.textContent = isEN ? 'AR' : 'EN';
+
+          const toggle = () => {
+            const now = localStorage.getItem(LANG_KEY) || (isEN ? EN : AR);
+            const next = now === EN ? AR : EN;
+            localStorage.setItem(LANG_KEY, next);
+            location.href = next === EN ? toEnglishUrl(location.pathname) : toArabicUrl(location.pathname);
+          };
+
+          el.addEventListener('click', toggle);
+          el.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+          });
+        });
+
+        // Keep current language while navigating
+        const currentLang = localStorage.getItem(LANG_KEY) || (isEN ? EN : AR);
+        rewriteInternalLinks(currentLang);
+
+        // Optional: mark active nav item (works for AR and EN links)
+        document.querySelectorAll('a[href]').forEach(a => {
+          const href = a.getAttribute('href') || '';
+          const path = location.pathname.replace(/\/+$/, '');
+          if (!href) return;
+          const same =
+            path.endsWith(href) ||
+            path.endsWith(href.replace(/^\/en\//, '')) ||
+            (href.includes('index') && (path === '' || path.endsWith('/')));
+          if (same) a.setAttribute('aria-current', 'page');
+        });
+
+        // Close any mobile menu on resize to desktop (if you use one)
+        window.addEventListener('resize', () => {
+          if (window.innerWidth >= 768) {
+            document.querySelectorAll('[data-open="true"]').forEach(n => n.setAttribute('data-open', 'false'));
+          }
+        });
+      });
+
+      // logic side bar
+
+      const iconMenu = document.querySelector('.icon-menu')
+      const sidebar = document.querySelector('.nav')
+      const iconClose = document.querySelector('.nav')
+      const link1 = document.querySelector('.link1')
+      const link2 = document.querySelector('.link2')
+      const link3 = document.querySelector('.link3')
+      const link4 = document.querySelector('.link4')
+      const link5 = document.querySelector('.link5')
+      const link6 = document.querySelector('.link6')
+
+
+      const openSideBar = () => {
+        if (sidebar.style.display === 'none') {
+          sidebar.style.display = 'block'
+        } else {
+          sidebar.style.display = 'none'
+        }
+      }
+
+      const closeSideBar = () => {
+        sidebar.style.display = 'none'
+      }
+
+      iconMenu.addEventListener('click', openSideBar)
+      link1.addEventListener('click', closeSideBar)
+      link2.addEventListener('click', closeSideBar)
+      link3.addEventListener('click', closeSideBar)
+      link4.addEventListener('click', closeSideBar)
+      link5.addEventListener('click', closeSideBar)
+      link6.addEventListener('click', closeSideBar)
+
+      document.addEventListener('click', (event) => {
+        // لو العنصر اللي اتداس عليه مش جوا السايدبار ولا زرار فتح السايدبار
+        if (!sidebar.contains(event.target) && !iconMenu.contains(event.target)) {
+          sidebar.style.display = 'none'
+        }
+        console.log('dddddddddd')
+      });
+
+
+
+      // slider
+      const slides = Array.from(document.querySelectorAll('#slider .slide'));
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const indicators = Array.from(document.querySelectorAll('.indicator'));
+      let current = 0;
+
+      function show(index) {
+        slides.forEach((s, i) => {
+          if (i === index) {
+            s.classList.remove('opacity-0');
+            s.classList.add('opacity-100');
+            s.style.pointerEvents = 'auto';
+          } else {
+            s.classList.remove('opacity-100');
+            s.classList.add('opacity-0');
+            s.style.pointerEvents = 'none';
+          }
+        });
+
+        indicators.forEach((dot, i) => {
+          if (i === index) {
+            dot.classList.remove('bg-white/30');
+            dot.classList.add('bg-white/70');
+          } else {
+            dot.classList.remove('bg-white/70');
+            dot.classList.add('bg-white/30');
+          }
+        });
+
+        current = index;
+      }
+
+      prevBtn.addEventListener('click', () => {
+        const nextIndex = (current - 1 + slides.length) % slides.length;
+        show(nextIndex);
+      });
+
+      nextBtn.addEventListener('click', () => {
+        const nextIndex = (current + 1) % slides.length;
+        show(nextIndex);
+      });
+
+      indicators.forEach(dot => {
+        dot.addEventListener('click', () => {
+          const idx = Number(dot.dataset.index);
+          show(idx);
+        });
+      });
+
+      // Optional: swipe support for touch devices
+      let startX = 0;
+      const sliderArea = document.getElementById('slider');
+      sliderArea.addEventListener('touchstart', (e) => startX = e.touches[0].clientX);
+      sliderArea.addEventListener('touchend', (e) => {
+        const endX = e.changedTouches[0].clientX;
+        const diff = endX - startX;
+        if (Math.abs(diff) > 40) {
+          if (diff > 0) { // swipe right -> previous
+            prevBtn.click();
+          } else { // swipe left -> next
+            nextBtn.click();
+          }
+        }
+      });
+
+      // init
+      show(0);
+
+    })();
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,923 @@
+.page-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.page-loader img {
+    width: 100px;
+    height: auto;
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Navigation hover effects */
+.navbar div, 
+.frame-19 div, 
+.frame-20 div, 
+.frame-21 div, 
+.frame-23 div, 
+.frame-24 div,
+.text-wrapper-12,
+.text-wrapper-13,
+.text-wrapper-21,
+.text-wrapper-22,
+.text-wrapper-23 {
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.navbar div:hover, 
+.frame-19 div:hover, 
+.frame-20 div:hover, 
+.frame-21 div:hover, 
+.frame-23 div:hover, 
+.frame-24 div:hover,
+.text-wrapper-12:hover,
+.text-wrapper-13:hover,
+.text-wrapper-21:hover,
+.text-wrapper-22:hover,
+.text-wrapper-23:hover {
+    color: #007bff;
+}
+
+/* Logo hover effect */
+.logo, .logo-2 {
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.logo:hover, .logo-2:hover {
+    opacity: 0.8;
+}
+
+/* Store button hover effect */
+.text-wrapper-10:hover, 
+.text-wrapper-2:hover {
+    opacity: 0.8;
+}
+
+/* --- UNIFIED SOCIAL POST STYLES --- */
+.social-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #f0f0f0; /* Placeholder background */
+}
+
+.social-card .post-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.social-card .post-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(25, 25, 25, 0) 0%, rgba(27, 27, 27, 0.73) 45%, rgba(38, 38, 38, 1) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px 15px;
+    color: white;
+    box-sizing: border-box;
+}
+
+.social-card:hover {
+    transform: scale(1.05);
+    z-index: 10;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.social-card:hover .post-overlay {
+    opacity: 1;
+}
+
+.social-card .overlay-header {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.social-card .social-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.social-card .overlay-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social-card .post-caption {
+    font-family: var(--details-bold-font-family);
+    font-weight: var(--details-bold-font-weight);
+    font-size: var(--details-bold-font-size);
+    line-height: 1.4;
+    color: var(--blue-100);
+    direction: rtl;
+}
+
+.social-card .post-stats {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.social-card .stat {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: var(--details-bold-font-size);
+    font-family: var(--details-bold-font-family);
+    color: var(--blue-100);
+}
+
+.social-card .stat img {
+    width: 16px;
+    height: auto;
+}
+
+/* Position like/comment counter */
+.group-4 .frame-29 {
+    position: absolute;
+    bottom: 180px;
+    left: 110px;
+    z-index: 2;
+}
+
+/* Position caption text */
+.group-4 .text-wrapper-18 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    color: white;
+    z-index: 2;
+}
+
+/* Show all elements on hover */
+.group-4:hover .frame-29,
+.group-4:hover .rectangle-2,
+.group-4:hover .text-wrapper-18,
+.group-4:hover .instagram {
+    opacity: 1;
+}
+
+/* Remove default image hover effects */
+.group-4 img {
+    transition: transform 0.3s ease;
+    transform: none !important;
+}
+
+/* Ensure proper stacking context */
+.group-4 {
+    z-index: 1;
+}
+
+.group-4:hover {
+    z-index: 2;
+}
+
+/* Infinite scroll animation - FIXED */
+@keyframes scroll-brands {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.infinite-scroll-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.infinite-scroll-content {
+    display: flex;
+    animation: scroll 40s linear infinite;  /* Slowed down from 20s to 40s */
+    width: fit-content;
+}
+
+.infinite-scroll-content:hover {
+    animation-play-state: paused;
+}
+
+.infinite-scroll-content img {
+    margin: 0 20px;
+    flex-shrink: 0;  /* Prevent images from shrinking */
+}
+
+/* Banner transition effects */
+.banner-image {
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    will-change: opacity, transform;
+}
+
+.banner-arrow {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.banner-arrow:hover {
+    transform: scale(1.1) rotate(5deg);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.banner-arrow:active {
+    transform: scale(0.9) rotate(15deg);
+}
+
+.banner-arrow:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+.banner-arrow.rotating {
+    animation: rotate360 1s ease-in-out;
+}
+
+@keyframes rotate360 {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .banner-image,
+    .banner-arrow {
+        transition-duration: 0.1s;
+    }
+    
+    .banner-arrow:hover {
+        transform: scale(1.05);
+    }
+    
+    .banner-arrow.rotating {
+        animation: none;
+    }
+}
+
+/* Discover Products button hover effect */
+.frame-10 {
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.frame-10:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.frame-10:active {
+    transform: scale(0.98);
+}
+
+/* Brand logos infinite scroll */
+.brands-scroll-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.brands-scroll-track {
+  display: flex;
+  animation: scroll-brands 100s linear infinite;
+  width: max-content;
+}
+
+
+.brands-scroll-track:hover {
+    animation-play-state: paused;
+}
+
+.brands-scroll-track img {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+}
+
+@keyframes scroll-brands {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Optimize animation performance */
+@media (prefers-reduced-motion: reduce) {
+    .brands-scroll-track {
+        animation-duration: 50s;
+    }
+}
+
+/* Register Now button hover effect */
+.frame-35 {
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.frame-35:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.frame-35:active {
+    transform: scale(0.98);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .brands-scroll-track {
+        gap: 20px;
+    }
+    
+    .brands-scroll-track img {
+        height: 60px;
+    }
+
+    .banner-arrow {
+        transform-origin: center center;
+        padding: 10px;
+    }
+    
+    .banner-arrow:hover {
+        transform: scale(1.05) rotate(3deg);
+    }
+}
+
+/* Language switcher hover effect */
+.text-wrapper-11:hover {
+    opacity: 0.8;
+}
+
+/* Footer links hover effects */
+[class*="text-wrapper"] {
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+[class*="text-wrapper"]:hover {
+    color: #007bff;
+    transform: translateX(-5px);
+}
+
+/* Footer contact info specific styles */
+[class*="text-wrapper"][class*="phone"]:hover,
+[class*="text-wrapper"][class*="email"]:hover,
+[class*="text-wrapper"]:hover[href^="tel:"],
+[class*="text-wrapper"]:hover[href^="mailto:"] {
+    text-decoration: underline;
+    transform: none;
+}
+
+/* Disable hover effect for headers and titles */
+.text-wrapper-7,
+.text-wrapper-8,
+.text-wrapper-15,
+.text-wrapper-16,
+.text-wrapper-20,
+.text-wrapper-25,
+.text-wrapper-26,
+.text-wrapper-27 {
+    transform: none !important;
+}
+
+/* Footer contact info hover effects */
+.text-wrapper-15:hover,
+.text-wrapper-16:hover {
+    text-decoration: underline;
+}
+
+/* Dynamic banner styles */
+.image-2 {
+    transition: opacity 0.3s ease-in-out;
+    object-fit: cover;
+}
+
+/* Banner arrow hover effects */
+.arrow-2 {
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    cursor: pointer;
+}
+
+.arrow-2:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.arrow-2:active {
+    transform: scale(0.95);
+}
+
+/* Banner container enhancements */
+.overlap-group {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Add loading state for banner transitions */
+.banner-loading {
+    opacity: 0.5;
+    pointer-events: none;
+}
+/* === Minimal animations: socials reveal + partners pop (non-invasive) === */
+
+/* Generic fade-up reveal */
+.fx-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .6s ease, transform .6s ease;
+  will-change: opacity, transform;
+  transition-delay: var(--fx-delay, 0s);
+
+}
+.fx-reveal.in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Social cards get a slightly stronger lift */
+.social-card.fx-reveal { transform: translateY(28px); }
+.social-card.fx-reveal.in { transform: none; }
+
+/* شركاؤنا pop effect */
+.fx-pop {
+  opacity: 0;
+  transform: scale(.96);
+  transform-origin: center;
+  transition: opacity .5s ease, transform .5s ease;
+}
+.fx-pop.in {
+  opacity: 1;
+  transform: scale(1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .fx-reveal, .fx-pop {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+html { scroll-behavior: smooth; }
+
+/* ===== ABOUT – Number Scramble (scoped) ===== */
+.about-us .num-scramble{
+  display:inline-block;
+  font-variant-numeric: tabular-nums;
+}
+.about-us .num-scramble .digits{
+  transition: filter .25s ease, opacity .25s ease;
+  will-change: contents, filter, opacity;
+}
+.about-us .num-scramble.scrambling .digits{
+  filter: blur(.7px);
+  opacity: .9;
+}
+.about-us .num-scramble .suffix{
+  display:inline-block;
+  transform: translateY(.6em);
+  opacity: 0;
+  transition: transform .55s cubic-bezier(.2,.8,.2,1), opacity .35s ease;
+}
+.about-us .num-scramble.ready .suffix{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* احترام تقليل الحركة */
+@media (prefers-reduced-motion: reduce){
+  .about-us .num-scramble .digits{ transition:none }
+  .about-us .num-scramble .suffix{ transition:none; transform:none; opacity:1 }
+}
+/* ===== ABOUT — Text FX (scoped) ===== */
+
+/* Typewriter (RTL-friendly) */
+.about-us .typing {
+  position: relative;
+  border-inline-end: 2px solid currentColor; /* caret */
+  padding-inline-end: 2px;
+  animation: about-caret 1s steps(1) infinite;
+  white-space: normal; /* allow wrapping */
+}
+.about-us .typed { border: 0; animation: none; }
+@keyframes about-caret { 0%,49% {opacity:1} 50%,100% {opacity:0} }
+
+/* Spread-in (per word) */
+.about-us .spread { display: inline; }
+.about-us .spread .word { display: inline-block; overflow: hidden; }
+.about-us .spread .word > span{
+  display:inline-block;
+  transform: translateY(.6em) scale(.96);
+  letter-spacing: -.06em;
+  filter: blur(1px);
+  opacity: 0;
+  transition:
+    transform .6s ease,
+    opacity .6s ease,
+    letter-spacing .6s ease,
+    filter .6s ease;
+  transition-delay: var(--d,0s);
+}
+.about-us .spread.in .word > span{
+  transform: none; letter-spacing: 0; filter: none; opacity: 1;
+}
+
+/* Shift (gentle horizontal drift per glyph) */
+.about-us .shift span{
+  display: inline-block;
+  animation: about-shift var(--dur,3s) ease-in-out var(--delay,0s) infinite alternate paused;
+  will-change: transform;
+}
+.about-us .shift.play span{ animation-play-state: running; }
+@keyframes about-shift {
+  from { transform: translateX(var(--from,-2px)); }
+  to   { transform: translateX(var(--to,2px)); }
+}
+
+/* Vertical rise (header + cards) */
+.about-us .rise{
+  opacity: 0; transform: translateY(24px);
+  transition: transform .6s ease, opacity .6s ease;
+  transition-delay: var(--d,0s);
+  will-change: transform, opacity;
+}
+.about-us .rise.in{ opacity: 1; transform: none; }
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .about-us .typing{ border: 0; animation: none; }
+  .about-us .spread .word > span,
+  .about-us .rise{ transition: none; opacity: 1; transform: none; }
+  .about-us .shift span{ animation: none !important; }
+}
+/* ===== ABOUT — Pop-out + Slide-in (scoped) ===== */
+
+/* Pop-out words */
+.about-us .popwords { display: inline; }
+.about-us .popwords .w{
+  display:inline-block;
+  transform: translateY(8px) scale(.96);
+  filter: blur(2px);
+  opacity: 0;
+  transition: transform .45s ease, opacity .45s ease, filter .45s ease;
+  transition-delay: var(--d, 0s);
+}
+.about-us .popwords.in .w{
+  transform: none; filter: none; opacity: 1;
+}
+
+/* Slide-in (vertical) */
+.about-us .slide-in{
+  opacity: 0; transform: translateY(24px);
+  transition: transform .6s ease, opacity .6s ease;
+  transition-delay: var(--d, 0s);
+  will-change: transform, opacity;
+}
+.about-us .slide-in.in{ opacity: 1; transform: none; }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .about-us .popwords .w,
+  .about-us .slide-in{ transition: none !important; opacity: 1 !important; transform: none !important; filter: none !important; }
+}
+/* ===== PRODUCTS — Card FX (scoped) ===== */
+.prouducts .prod-card{
+  --rx: 0deg; --ry: 0deg;
+  position: relative;
+  transform: translateY(24px) scale(.98) rotateX(var(--rx)) rotateY(var(--ry));
+  opacity: 0;
+  transition:
+    transform .6s cubic-bezier(.2,.8,.2,1),
+    opacity  .6s ease,
+    box-shadow .6s ease, filter .6s ease;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+.prouducts .prod-card.in{
+  opacity: 1;
+  transform: translateY(0) scale(1) rotateX(0) rotateY(0);
+}
+.prouducts .prod-card.fx-tilt:hover{
+  transform: translateY(-4px) scale(1.01) rotateX(var(--rx)) rotateY(var(--ry));
+  box-shadow: 0 24px 40px rgba(0,0,0,.18);
+  filter: saturate(1.02);
+}
+
+/* glossy sweep on hover */
+.prouducts .prod-card::after{
+  content:"";
+  position:absolute; inset:-1px;
+  pointer-events:none;
+  background:
+    radial-gradient(180px 180px at var(--mx,120%) var(--my,-40%),
+      rgba(255,255,255,.18), transparent 60%);
+  opacity: 0; transition: opacity .25s ease;
+}
+.prouducts .prod-card.fx-tilt:hover::after{ opacity:.9; }
+
+/* main product image “float” */
+.prouducts .prod-photo{
+  transform: translateY(8px) scale(.98);
+  opacity: .95;
+  transition: transform .6s cubic-bezier(.2,.8,.2,1), opacity .6s ease;
+  will-change: transform, opacity;
+}
+.prouducts .prod-card.in .prod-photo{ transform:none; opacity:1; }
+.prouducts .prod-card.fx-tilt:hover .prod-photo{ transform: translateY(-4px) scale(1.03); }
+
+/* title + spec rows stagger */
+.prouducts .prod-info{
+  opacity: 0; transform: translateY(12px);
+  transition: transform .5s ease, opacity .5s ease;
+  transition-delay: var(--d, 0s);
+}
+.prouducts .prod-card.in .prod-info{ opacity:1; transform:none; }
+
+/* keyboard focus support */
+.prouducts .prod-card:focus-within{
+  box-shadow: 0 0 0 3px rgba(0,86,160,.25), 0 18px 32px rgba(0,0,0,.16);
+  transform: translateY(-2px);
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .prouducts .prod-card{ transition: none !important; transform:none !important; opacity:1 !important; }
+  .prouducts .prod-photo, .prouducts .prod-info{ transition: none !important; transform:none !important; opacity:1 !important; }
+}
+/* ===== PRODUCTS — Quality Tests Section Rise Animation (scoped) ===== */
+.prouducts .fx-rise-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition-delay: var(--d, 0s);
+  will-change: opacity, transform;
+}
+
+.prouducts .fx-rise-up.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .prouducts .fx-rise-up {
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+/* ===== NEWS — Social Post Card "Flashy" Animation (scoped) ===== */
+.news .frame-26 {
+  /* This creates the 3D space for the cards to flip within */
+  perspective: 1000px;
+}
+
+.news .social-card.fx-card-flip {
+  opacity: 0;
+  /* Start the card rotated on the Y-axis and slightly moved. Origin is right for RTL. */
+  transform: translateX(40px) rotateY(-45deg);
+  transform-origin: right center;
+  transition: all 0.7s cubic-bezier(0.34, 1.56, 0.64, 1); /* A bouncy, energetic ease */
+  transition-delay: var(--d, 0s); /* Stagger delay controlled by JS */
+  will-change: opacity, transform;
+}
+
+.news .social-card.fx-card-flip.in {
+  opacity: 1;
+  transform: none; /* Return to normal position */
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .news .social-card.fx-card-flip {
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+/* === شركاؤنا: Pure CSS infinite strip (RTL-friendly) === */
+.partners-strip {
+  position: absolute;   
+  width: 90%;
+  left: 5%;
+  height: 397px;
+  overflow: hidden;
+  /* edge fade (optional) */
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 80px, #000 calc(100% - 80px), transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0, #000 80px, #000 calc(100% - 80px), transparent 100%);
+}
+
+/* Adjust overall speed here */
+.partners-strip {
+  --marquee-duration: 90s;  /* was too fast; increase to slow down */
+}
+
+.partners-strip .partners-track {
+  display: inline-flex;
+  align-items: center;
+  gap: 46px;                     /* matches About Us feel */
+  height: 100%;
+  width: max-content;            /* key: let content size itself */
+  backface-visibility: hidden;
+  will-change: transform;
+  animation: partners-marquee var(--marquee-duration) linear infinite;
+}
+
+/* FIXED: The partners-track--b should be positioned inline with the first track */
+.partners-strip .partners-track.partners-track--b {
+  position: absolute;
+  top: 0;
+  left: 100%; /* Start right after the first track */
+  animation: partners-marquee-b var(--marquee-duration) linear infinite;
+}
+
+/* If you want pause on hover later:
+.partners-strip:hover .partners-track { animation-play-state: paused; }
+*/
+
+.partners-strip img {
+  height: 195px;                 /* visually matches About Us logos */
+  width: auto;
+  flex: 0 0 auto;
+  object-fit: contain;
+}
+
+/* First track animation: moves from 0% to -100% */
+@keyframes partners-marquee {
+  0%   { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-100%, 0, 0); }
+}
+
+/* Second track animation: moves from 0% to -100% (starts from right) */
+@keyframes partners-marquee-b {
+  0%   { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-100%, 0, 0); }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .partners-strip .partners-track { animation: none; }
+}
+/* === VISIBILITY + STACKING ONLY (no layout changes) === */
+
+/* 1) Let content show; don't clip. Do NOT change width/max-width. */
+.home .overlap-wrapper {
+  overflow: visible !important;
+  height: auto !important; /* allow natural height */
+  /* width/max-width remain as in original CSS to preserve positions */
+}
+
+/* 2) Treat the big banner as a true background (stay behind). */
+.home .overlap-4 {
+  /* position stays as defined in your CSS */
+  z-index: 0; /* behind all content */
+}
+
+/* 3) Keep hero layers in front of the banner (no position changes). */
+.home .overlap-group,   /* hero block over banner */
+.home .frame-9 {        /* hero CTA block */
+  z-index: 2;
+}
+
+/* 4) News section in front of banner, unchanged layout. */
+.home .overlap-3 {
+  z-index: 2;
+}
+
+/* 5) News gray background should never block cards/text. */
+.home .overlap-3 .rectangle {
+  z-index: 1;          /* behind its content */
+  pointer-events: none;
+}
+
+/* 6) Ensure the news cards & interactive bits sit above their bg. */
+.home .frame-5,
+.home .text-wrapper-5,
+.home .text-wrapper-6,
+.social-card {
+  z-index: 3;
+}
+
+/* 7) شركاؤنا/partners block must not be hidden behind hero. */
+.home .frame-23 {
+  z-index: 4;          /* above hero if they overlap vertically */
+}
+
+/* 8) Header & footer always float above page content. */
+.home .overlap-group-wrapper, /* header container */
+.footer {
+  z-index: 10;
+}
+
+/* IMPORTANT: Do NOT include any rule that changes .home .overlap width/left.
+   Removing this prevents the drift:
+   // .home .overlap { width: 100%; left: 0; }  <-- DO NOT ADD THIS
+*/
+/* Keep the hero background well-positioned while it rotates */
+.home .overlap-4{
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Pick ONE of the following depending on your preference: */
+  /* background-size: cover !important;      */ /* natural crop, fills without distortion */
+  /* background-size: 100% 100% !important;  */ /* exact stretch (matches current look) */
+}
+
+@media (min-width: 1450px) {
+  .prouducts .frame-wrapper {
+    left: 100px !important;
+  }
+}
+@media (min-width: 1675px) {
+  .prouducts .frame-wrapper {
+    left: 300px !important;
+  }
+}
+
+@media (min-width: 2060px) {
+  .prouducts .frame-wrapper {
+    left: 350px !important;
+  }
+}
+
+@media (min-width: 2175px) {
+  .prouducts .frame-wrapper {
+    left: 400px !important;
+  }
+}
+@media (min-width: 2251px) {
+  .prouducts .frame-wrapper {
+    left: 550px !important;
+  }
+}
+/* Join Us — fade-in for the side rectangle after page load */
+.join-us .rectangle.rect-fade { 
+  opacity: 0;
+}
+
+.join-us .rectangle.rect-fade.in {
+  opacity: 1;
+  transition: opacity 0.7s ease-out;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .join-us .rectangle.rect-fade,
+  .join-us .rectangle.rect-fade.in {
+    opacity: 1 !important;
+    transition: opacity 5s ease-out 5s
+  }
+}
+/* Mobile auto-scale centering fix */
+@media (max-width: 1024px) {
+  html, body { height: 100%; }
+  body { margin: 0; overflow-x: hidden; }
+
+  #fit-wrapper { position: relative; width: 100%; min-height: 100svh; }
+
+  /* IMPORTANT: lock the wrapper to your desktop design width */
+  .scale-root {
+    position: relative;
+    width: 1440px;           /* <= set to your design width */
+    left: -40%;               /* center by translating from middle */
+    transform-origin: top left;
+  }
+}

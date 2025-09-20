@@ -1,0 +1,198 @@
+
+/* Shared components */
+
+/* Header (generic) */
+.site-header {
+  position: relative;
+  background: #fcfcff;
+  box-shadow: var(--drop-shadow-100, 0 1px 4px rgba(0,0,0,.06));
+}
+.site-header .inner {
+  display:flex; align-items:center; justify-content:space-between;
+  gap: var(--g3);
+  padding: 24px clamp(16px,6vw,96px);
+  width: min(1100px, 92vw);
+  margin-inline: auto;
+}
+
+/* Footer (flows at the bottom) */
+.site-footer {
+  background: var(--blue-500);
+  color: var(--neutral-0);
+}
+.site-footer .inner {
+  display:flex; flex-direction:column; gap:16px;
+  padding: 40px clamp(16px,6vw,97px);
+  width: min(1100px, 92vw);
+  margin-inline: auto;
+}
+
+/* Card (social/news/product) */
+.card {
+  background:#fff; border-radius:8px; overflow:hidden;
+  border: 0.5px solid var(--neutral-300, #d1d3d5);
+  box-shadow: var(--drop-shadow-300, 0 6px 24px rgba(0,0,0,.08));
+  display:flex; flex-direction:column;
+}
+.card .card-media { aspect-ratio: 16 / 9; overflow:hidden; }
+.card .card-body { padding:16px; display:flex; flex-direction:column; gap:8px; }
+
+/* Brand strip / infinite scroll (keep single animation name) */
+.brands-scroll-container { overflow:hidden; }
+.brands-scroll-track { display:flex; gap:24px; animation: scroll-brands 30s linear infinite; }
+@keyframes scroll-brands { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* Forms (shared frame) */
+.form-frame {
+  background:#fff; border-radius:16px; padding:clamp(16px,3vw,32px);
+  box-shadow: var(--main-shadows, 0 12px 32px rgba(0,0,0,.06));
+  display:grid; gap:16px;
+}
+.form-row { display:grid; gap:8px; }
+.form-row.inline { grid-template-columns: 1fr 1fr; gap:16px; }
+.input, .select, .textarea {
+  width:100%; padding:12px 14px; border:1px solid var(--neutral-300);
+  border-radius:8px; background:#fff; font: inherit;
+}
+.button {
+  display:inline-flex; align-items:center; justify-content:center; gap:10px;
+  padding:10px 16px; border-radius:8px; border:none; cursor:pointer;
+  background: var(--blue-500); color:#fff; font-weight:700;
+}
+.button--alt { background: var(--red-500); }
+
+
+/* ---- merged module ---- */
+/* Radar ripple effect */
+.map-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.ping {
+  position: absolute;
+  left: 63%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: none;
+  box-shadow: none;
+  isolation: isolate;
+}
+
+.ping::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 140vmin;
+  height: 140vmin;
+  transform: translate(-50%, -50%) scale(.72);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle,
+      rgba(165,165,165,0.95) 0%,
+      rgba(165,165,165,0.95) 10%,
+      rgba(165,165,165,0.65) 10.1%,
+      rgba(165,165,165,0.65) 20%,
+      rgba(165,165,165,0.35) 20.1%,
+      rgba(165,165,165,0.35) 40%,
+      rgba(165,165,165,0.20) 40.1%,
+      rgba(165,165,165,0.20) 60%,
+      rgba(165,165,165,0.10) 60.1%,
+      rgba(165,165,165,0.10) 100%
+    );
+  filter: blur(0.3px);
+  animation: ripple 3.8s linear infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes ripple {
+  0% {
+    transform: translate(-50%, -50%) scale(.62);
+    opacity: .9;
+  }
+  60% {
+    transform: translate(-50%, -50%) scale(.98);
+    opacity: .9;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.08);
+    opacity: 0;
+  }
+}
+
+
+/* ---- merged module ---- */
+.social-icons-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+
+/* ---- merged module ---- */
+/* Clean social media posts styling */
+.social-posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.social-post {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-post img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Remove all hover effects and overlays */
+.social-post:hover {
+    transform: none;
+}
+
+.instagram,
+.overlay,
+.frame-28,
+.frame-29,
+.group-5,
+.rectangle-2,
+.comment,
+.text-wrapper-18 {
+    display: none !important;
+}
+
+/* Override any existing hover effects */
+.news .group-4 img:hover,
+.frame-5 img:hover,
+.frame-27 img:hover {
+    transform: none;
+    z-index: auto;
+}
+.about-us .rectangle-2 { display: block !important; }

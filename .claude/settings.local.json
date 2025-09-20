@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__playwright__playwright_navigate",
+      "mcp__puppeteer__puppeteer_navigate",
+      "mcp__stagehand__stagehand_navigate",
+      "mcp__filesystem__list_directory",
+      "Bash(rm:*)"
+    ],
+    "deny": []
+  }
+}
