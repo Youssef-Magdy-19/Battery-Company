@@ -2,15 +2,15 @@
 <html lang="ar" dir="rtl">
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <meta name="viewport" />
-  <meta charset="utf-8" />
-  <link rel="stylesheet" href="globals.css" />
-  <link rel="stylesheet" href="contact_us_style.css" />
-  <link rel="stylesheet" href="dynamic.css" />
-  <link rel="stylesheet" href="components.css" />
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="../globals.css" />
+  <link rel="stylesheet" href="../contact_us_style.css" />
+  <link rel="stylesheet" href="../dynamic.css" />
+  <link rel="stylesheet" href="../components.css" />
+  <script src="../script.js" defer></script>
   <style>
     /* Additional styles for functional inputs */
     .form input,
@@ -46,7 +46,6 @@
 </head>
 
 <body>
-
   <header class="header">
     <div class="flex justify-between items-center gap-[1rem] w-[94%] m-auto">
       <div class="frame-13 hidden sm:flex">
@@ -73,7 +72,7 @@
       <div class="navbar hidden lg:flex flex-row items-center gap-[1.25rem]">
         <div class="frame-24">
           <a href="index.html">
-            <div class="text-wrapper-12">الرئيسية</div>
+            <div class="text-wrapper-12">الرئيسية </div>
           </a>
         </div>
         <div class="frame-20">
@@ -84,7 +83,7 @@
         <div class="frame-22">
           <div class="frame-23">
             <a href="new.html">
-              <div class="text-wrapper-13">الأخبار</div>
+              <div class="text-wrapper-13">الأخبار </div>
             </a>
           </div>
         </div>
@@ -96,28 +95,30 @@
         </a>
         <div class="frame-20">
           <a href="products.html">
-            <div class="text-wrapper-12">منتجاتنا</div>
+            <div class="text-wrapper-12">منتجاتنا </div>
           </a>
         </div>
         <div class="frame-20">
-          <div class="text-wrapper-12">الوظائف</div>
+          <a href="https://www.tasnee.com/en/contact-us/careers">
+            <div class="text-wrapper-12">الوظائف </div>
+          </a>
         </div>
       </div>
 
       <!-- Side Bar -->
       <nav class="nav w-[80%] left-[11%] mt-[-20px] py-[15px] px-[20px] rounded-2xl">
         <ul class="flex flex-col gap-[1rem] justify-center items-center">
-          <li class="text-wrapper-11 link1"><a href="">الرئيسية</a></li>
-          <li class="text-wrapper-11 link2"><a href="">من نحن</a></li>
-          <li class="text-wrapper-11 link3"><a href="">منتجاتنا</a></li>
-          <li class="text-wrapper-11 link4"><a href="">الأخبار</a></li>
-          <li class="text-wrapper-11 link5"><a href="">تواصل معنا</a></li>
-          <li class="text-wrapper-11 link6"><a href="">الوظائف</a></li>
+          <li class="text-wrapper-11 link1"><a href="index_en.html">الرئيسية </a></li>
+          <li class="text-wrapper-11 link2"><a href="about_us_en.html">من نحن</a></li>
+          <li class="text-wrapper-11 link3"><a href="products_en.html">منتجاتنا</a></li>
+          <li class="text-wrapper-11 link4"><a href="new_en.html">الأخبار</a></li>
+          <li class="text-wrapper-11 link5"><a href="contact_us_en.html">تواصل معنا</a></li>
+          <li class="text-wrapper-11 link6"><a href="https://www.tasnee.com/en/contact-us/careers">الوظائف</a></li>
           <div class="frame-13 flex sm:hidden">
             <div class="frame-16">
               <div class="arrow"><img class="vector-4" src="https://c.animaapp.com/ukyvrevr/img/vector-5.svg" /></div>
               <div class="frame-17">
-                <div class="text-wrapper-11">EN</div>
+                <div class="text-wrapper-11 block sm:hidden">EN</div>
               </div>
             </div>
             <div class="frame-15 order-2">
@@ -139,21 +140,20 @@
 
 
   <div class="mx-3 my-6">
-    <div class="text-sm text-neutral-500"><a href="/index.html">الرئيسية</a> &gt; <span
+    <div class="text-sm text-neutral-500"><a href="/index.html">الرئيسية </a> &gt; <span
         class="text-neutral-700 font-semibold">تواصل معنا</span>
     </div>
   </div>
 
 
-    <section class="w-[94%] mx-auto px-4 py-12">
+  <section class="w-[94%] mx-auto px-4 py-12">
     <div class="grid md:grid-cols-2 gap-8 items-start">
-      
+
       <!-- قسم المعلومات -->
       <div class="space-y-6 md:order-2">
         <!-- الخريطة -->
         <div class="w-full h-64">
-          <iframe 
-            class="w-full h-full rounded-lg"
+          <iframe class="w-full h-full rounded-lg"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.110053056709!2d46.67529631500253!3d24.713551584117525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f038b4f7ad2a1%3A0x44e8ddfb66914318!2sRiyadh!5e0!3m2!1sen!2ssa!4v1637581512345!5m2!1sen!2ssa"
             allowfullscreen="" loading="lazy"></iframe>
         </div>
@@ -171,21 +171,23 @@
           <div class="flex items-center gap-3">
             <img class="combined-shape" src="https://c.animaapp.com/Ey7bjgxp/img/combined-shape.svg" />
             <div>
-              <h3 class="font-bold">السعودية</h3>
+              <h3 class="font-bold">السعودية </h3>
               <p class="text-gray-600 text-sm">P.O.BOX 177, RIYADH-11383.</p>
             </div>
           </div>
 
           <div class="flex items-center gap-3">
-            <img class="w-[34px] h-[34px]" src="https://c.animaapp.com/Ey7bjgxp/img/outlined---communication---email@2x.png" alt="">
+            <img class="w-[34px] h-[34px]"
+              src="https://c.animaapp.com/Ey7bjgxp/img/outlined---communication---email@2x.png" alt="">
             <div>
-              <h3 class="font-bold">الإيميل</h3>
+              <h3 class="font-bold">البريد الإلكتروني </h3>
               <p class="text-gray-600 text-sm">info@attariast.com</p>
             </div>
           </div>
 
           <div class="flex items-center gap-3">
-            <img class="w-[34px] h-[34px]" src="https://c.animaapp.com/Ey7bjgxp/img/outlined---communication---call@2x.png" alt="">
+            <img class="w-[34px] h-[34px]"
+              src="https://c.animaapp.com/Ey7bjgxp/img/outlined---communication---call@2x.png" alt="">
             <div>
               <h3 class="font-bold">خدمة العملاء</h3>
               <p class="text-gray-600 text-sm">800 124 0430</p>
@@ -195,42 +197,41 @@
       </div>
 
       <!-- الفورم -->
-        <form class="bg-[#0056a0] p-8 rounded-2xl shadow-lg ">
-          
-          <!-- الاسم -->
-          <div class="mb-4">
-            <label class="block text-white mb-2">الاسم</label>
-            <input type="text" placeholder="ادخل اسمك"
-              class="w-full p-3 rounded-full focus:outline-none text-gray-800" />
-          </div>
-      
-          <!-- رقم الجوال -->
-          <div class="mb-4">
-            <label class="block text-white mb-2">رقم الجوال</label>
-            <input type="text" placeholder="+966 xxx xxxx xxx"
-              class="w-full p-3 rounded-full focus:outline-none text-gray-800" />
-          </div>
-      
-          <!-- البريد الإلكتروني -->
-          <div class="mb-4">
-            <label class="block text-white mb-2">البريد الإلكتروني</label>
-            <input type="email" placeholder="البريد الإلكتروني"
-              class="w-full p-3 rounded-full focus:outline-none text-gray-800" />
-          </div>
-      
-          <!-- الرسالة -->
-          <div class="mb-4">
-            <label class="block text-white mb-2">اترك رسالتك</label>
-            <textarea placeholder="اترك رسالتك"
-              class="w-full p-3 rounded-lg focus:outline-none text-gray-800 h-28"></textarea>
-          </div>
-      
-          <!-- زر الإرسال -->
-          <button
-            class="form-btn w-full bg-sky-400 text-white font-bold py-3 rounded-full hover:bg-sky-500 transition">
-            إرسال
-          </button>
-        </form>
+      <form class="bg-[#0056a0] p-8 rounded-2xl shadow-lg ">
+
+        <!-- الاسم -->
+        <div class="mb-4">
+          <label class="block text-white mb-2">الاسم </label>
+          <input type="text" placeholder="ادخل اسمك "
+            class="w-full p-3 rounded-full focus:outline-none text-gray-800" />
+        </div>
+
+        <!-- رقم الجوال -->
+        <div class="mb-4">
+          <label class="block text-white mb-2">رقم الجوال </label>
+          <input type="text" placeholder="+966 xxx xxxx xxx"
+            class="w-full p-3 rounded-full focus:outline-none text-gray-800" />
+        </div>
+
+        <!-- البريد الإلكتروني -->
+        <div class="mb-4">
+          <label class="block text-white mb-2">البريد الإلكتروني </label>
+          <input type="email" placeholder="البريد الإلكتروني"
+            class="w-full p-3 rounded-full focus:outline-none text-gray-800" />
+        </div>
+
+        <!-- الرسالة -->
+        <div class="mb-4">
+          <label class="block text-white mb-2">اترك رسالتك </label>
+          <textarea placeholder="اترك رسالتك "
+            class="w-full p-3 rounded-lg focus:outline-none text-gray-800 h-28"></textarea>
+        </div>
+
+        <!-- زر الإرسال -->
+        <button class="form-btn w-full bg-sky-400 text-white font-bold py-3 rounded-full hover:bg-sky-500 transition">
+          إرسال
+        </button>
+      </form>
 
     </div>
   </section>
@@ -239,10 +240,11 @@
   <footer class="footer">
     <div class="w-[94%] md:w-[90%] pt-[30px] m-auto text-white">
       <div class="flex flex-col xl:flex-row gap-[1rem] items-start">
-        <div class="div-links-footer xl:mt-[0px] grid gap-[2rem] m-auto text-center md:text-start grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div
+          class="div-links-footer xl:mt-[0px] grid gap-[2rem] m-auto text-center md:text-start grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           <div class="flex flex-col gap-[1rem]">
             <div class="group">
-              <div class="font-bold">تواصل معنا</div>
+              <div class="font-bold">تواصل معنا </div>
             </div>
             <div class="flex items-center gap-[.5rem]">
               <div class="">
@@ -266,28 +268,27 @@
           </div>
 
           <div class="flex flex-col gap-[1rem] m-auto lg:m-0">
-            <div class="font-bold">الخصوصية</div>
+            <div class="font-bold">الخصوصية </div>
             <div class="flex flex-col gap-[1rem]">
-              <div class="text-sm cursor-pointer hover:text-blue-500">شروط الأستخدام</div>
-              <div class="text-sm cursor-pointer hover:text-blue-500">الضمان</div>
+              <div class="text-sm cursor-pointer hover:text-blue-500">شروط الاستخدام </div>
+              <div class="text-sm cursor-pointer hover:text-blue-500">الضمان </div>
             </div>
           </div>
           <div class="flex flex-col gap-[1rem]">
             <div class="">
-              <div class="text-white font-bold">روابط مهمة</div>
+              <div class="text-white font-bold">روابط مهمة  </div>
             </div>
-            <div class="text-sm cursor-pointer hover:text-blue-500">من نحن</div>
-            <div class="text-sm cursor-pointer hover:text-blue-500">منتجاتنا</div>
-            <div class="text-sm cursor-pointer hover:text-blue-500">الموقع الألكتروني</div>
-            <div class="text-sm cursor-pointer hover:text-blue-500">الأخبار</div>
+            <div class="text-sm cursor-pointer hover:text-blue-500">من نحن </div>
+            <div class="text-sm cursor-pointer hover:text-blue-500">منتجاتنا </div>
+            <div class="text-sm cursor-pointer hover:text-blue-500">الموقع الإلكتروني </div>
+            <div class="text-sm cursor-pointer hover:text-blue-500">الأخبار </div>
           </div>
         </div>
         <div class="mb-[20px] div-logo-footer">
           <div
             class="flex flex-col lg:flex-row xl:flex-col gap-[1rem] items-center justify-center lg:justify-between mt-[25px] xl:mt-[0] mb-[15px]">
             <p class="p xl:w-[550px]">
-              منذ 1995، نوفر بطاريات عالية الجودة تلبي احتياجات العملاء، مع التزامنا بالابتكار والجودة. نفخر بثقة
-              عملائنا وحصولنا على جوائز مرموقة، ونعمل لمواكبة رؤية 2030 وتعزيز الصناعة السعودية.
+              منذ 1995، نوفر بطاريات عالية الجودة تلبي احتياجات العملاء، مع التزامنا بالابتكار والجودة. نفخر بثقة عملائنا وحصولنا على جوائز مرموقة، ونعمل لمواكبة رؤية 2030 وتعزيز الصناعة السعودية.
             </p>
             <div class="logo w-[100%] md:w-[600px] xl:w-[540px]"></div>
           </div>
@@ -348,10 +349,12 @@
       </div>
       <div class="pt-[12px]">
         <img class="line" src="https://c.animaapp.com/1lwzhgBv/img/line-1.svg" />
-        <p class="text-center py-[10px] hover:text-blue-500">© جميع الحقوق محفوظة للشركة الوطنية لصناعة البطاريات</p>
+        <p class="text-center py-[10px] hover:text-blue-500"> © جميع الحقوق محفوظة للشركة الوطنية لصناعة البطاريات
+        </p>
       </div>
     </div>
   </footer>
+
 
   <script>
     // Form submission handler
