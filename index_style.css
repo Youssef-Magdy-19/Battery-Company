@@ -181,9 +181,6 @@
   height: 75px;
 }
 
-.overlap-3 {
-  width: 100%;
-}
 
 .rectangle {
   width: 100%;
@@ -1047,7 +1044,7 @@
 
 
 
-.dddd , .nav {
+.dddd , .navb {
   background-color: #ffffff0f;
   border-radius: 29px;
   border: 1px solid;
@@ -1061,12 +1058,15 @@
   height: 60px;
 }
 
-.nav{
+.navb{
+  background-color: #1a1a1aad;
+}
+
+.navb{
   display: none;
-  background-color: white;
   position: absolute;
   z-index: 10000000000;
-  top: 70px;
+  top: 75px;
 }
 
 .group-4 {
@@ -1152,10 +1152,6 @@
   letter-spacing: var(--details-letter-spacing);
   direction: rtl;
   font-style: var(--details-font-style);
-}
-
-.header-logo{
-  order: 1;
 }
 
 
