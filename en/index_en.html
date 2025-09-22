@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -35,6 +35,12 @@
     margin-inline-start: 8px;
     /* يضيف مسافة بعد النص في RTL */
     opacity: 0.95;
+  }
+  .vector-2{
+    rotate: 180deg !important;
+  }
+  .image{
+    transform: scaleX(-1) !important;
   }
 
   /* تصغير الخط في الشاشات الصغيرة */
@@ -176,10 +182,10 @@
       <div class="">
         <p class="text-wrapper-8">Saudi leadership in battery manufacturing</p>
         <div class="frame-10 mt-[30px]">
+          <div class="text-wrapper-9">Discover our products </div>
           <div class="vector-wrapper">
             <img class="vector-2" src="https://c.animaapp.com/in0BC4Oq/img/vector-2.svg" />
           </div>
-          <div class="text-wrapper-9">Discover our products </div>
         </div>
       </div>
       <img class="hidden md:block w-[280px] h-[280px]"
@@ -202,7 +208,7 @@
       <div class="right-col">
         <div class="flex flex-col justify-center h-full">
           <!-- Heading -->
-          <h2 class="hero-title text-right text-blue-500 font-extrabold text-3xl sm:text-4xl leading-tight">
+          <h2 class="hero-title text-blue-500 font-extrabold text-3xl sm:text-4xl leading-tight">
             We are proud to be part of the success story of<br />
             <span class="text-blue-600">the Saudi industry </span> for more than 30 years
             <span class="text-blue-400 block font-semibold text-md"></span>
@@ -213,7 +219,7 @@
             <!-- stat 1 -->
             <div class="flex flex-col items-start">
               <div class="stat-number text-4xl sm:text-5xl font-extrabold text-blue-600">30M+</div>
-              <div class="text-sm text-blue-500 mt-1 text-right">
+              <div class="text-sm text-blue-500 mt-1">
                 Batteries manufactured inside the Kingdom
               </div>
             </div>
@@ -221,7 +227,7 @@
             <!-- stat 2 -->
             <div class="flex flex-col items-start">
               <div class="stat-number text-4xl sm:text-5xl font-extrabold text-blue-600">60.5%</div>
-              <div class="text-sm text-blue-500 mt-1 text-right">
+              <div class="text-sm text-blue-500 mt-1">
                 Percentage of local content in products
               </div>
             </div>
@@ -257,10 +263,10 @@
           <div class="flex flex-col md:flex-row items-end  gap-4 items-stretch m-auto">
             <div class="mt-auto relative img1-home">
               <div
-                class="arrow-outward-wrapper w-[65px] h-[65px] md:w-[50px] md:h-[50px] lg:h-[35px] lg:w-[35px] absolute ml-[50px] mt-[-10px] lg:mt-[-10px]">
+                class="arrow-outward-wrapper w-[65px] h-[65px] md:w-[50px] md:h-[50px] lg:h-[35px] lg:w-[35px] absolute mt-[-10px] lg:mt-[-10px]">
               </div>
               <!-- Banner Placeholder 1 -->
-              <img class="image md:w-[300px] md:h-[240px] lg:h-[210px] xl:w-[240px] xl:h-[250px] lg:ml-[-20px]"
+              <img class="image md:w-[300px] md:h-[240px] lg:h-[210px] xl:w-[240px] xl:h-[250px]"
                 src="https://c.animaapp.com/in0BC4Oq/img/image@2x.png" alt="Banner Placeholder 1" />
             </div>
             <img class="image-2 md:w-[450px] md:h-[270px] xl:w-[300px] xl:h-[290px] mt-[30px]"
@@ -414,7 +420,7 @@
 
   <footer class="bg-[#0056a0]">
     <div class="w-[94%] md:w-[90%] pt-[30px] m-auto text-white">
-      <div class="flex flex-col xl:flex-row gap-[5rem] items-start">
+      <div class="flex flex-col xl:flex-row gap-[2.5rem] xl:gap-[5rem] items-start">
         <div
           class="div-links-footer xl:mt-[0px] grid gap-[2rem] m-auto text-center md:text-start grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
 

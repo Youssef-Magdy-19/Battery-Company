@@ -13,7 +13,6 @@
   display: flex;
   flex-direction: column;
   height: 245px;
-  align-items: flex-end;
   justify-content: space-between;
   align-self: stretch;
   width: 100%;
@@ -38,7 +37,6 @@
 .frame-4 {
   display: inline-flex;
   flex-direction: column;
-  align-items: flex-end;
   gap: 16px;
   flex: 0 0 auto;
 }
@@ -55,14 +53,12 @@
   font-size: var(--body-bold-font-size);
   line-height: var(--body-bold-line-height);
   letter-spacing: var(--body-bold-letter-spacing);
-  direction: rtl;
   font-style: var(--body-bold-font-style);
 }
 
 .frame-5 {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   gap: 16px;
   align-self: stretch;
   width: 100%;
@@ -145,7 +141,6 @@
   display: flex;
   flex-direction: column;
   width: 89px;
-  align-items: flex-end;
   gap: 16px;
 }
 
@@ -163,7 +158,6 @@
   font-size: var(--details-font-size);
   letter-spacing: var(--details-letter-spacing);
   line-height: var(--details-line-height);
-  direction: rtl;
   font-style: var(--details-font-style);
 }
 
@@ -175,7 +169,6 @@
   font-size: var(--details-font-size);
   line-height: var(--details-line-height);
   letter-spacing: var(--details-letter-spacing);
-  direction: rtl;
   font-style: var(--details-font-style);
 }
 
@@ -188,14 +181,12 @@
   font-size: var(--details-font-size);
   line-height: var(--details-line-height);
   letter-spacing: var(--details-letter-spacing);
-  direction: rtl;
   font-style: var(--details-font-style);
 }
 
 .frame-8 {
   display: inline-flex;
   flex-direction: column;
-  align-items: flex-end;
   gap: 8px;
   flex: 0 0 auto;
 }
@@ -208,7 +199,6 @@
   font-size: var(--details-font-size);
   line-height: var(--details-line-height);
   letter-spacing: var(--details-letter-spacing);
-  direction: rtl;
   font-style: var(--details-font-style);
 }
 
@@ -243,7 +233,6 @@
   text-align: center;
   line-height: var(--body-line-height);
   letter-spacing: var(--body-letter-spacing);
-  direction: rtl;
   font-style: var(--body-font-style);
 }
 
@@ -267,10 +256,9 @@
   font-weight: var(--details-font-weight);
   color: var(--neutral-300);
   font-size: var(--details-font-size);
-  text-align: left;
+  text-align: left !important;
   line-height: var(--details-line-height);
   letter-spacing: var(--details-letter-spacing);
-  direction: rtl;
   font-style: var(--details-font-style);
 }
 
@@ -295,7 +283,6 @@
   text-align: left;
   line-height: var(--details-line-height);
   letter-spacing: var(--details-letter-spacing);
-  direction: rtl;
   font-style: var(--details-font-style);
 }
 
@@ -354,7 +341,6 @@
   text-align: left;
   line-height: var(--details-bold-line-height);
   letter-spacing: var(--details-bold-letter-spacing);
-  direction: rtl;
   font-style: var(--details-bold-font-style);
 }
 
@@ -431,7 +417,6 @@
   text-align: left;
   line-height: var(--body-line-height);
   letter-spacing: var(--body-letter-spacing);
-  direction: rtl;
   font-style: var(--body-font-style);
 }
 
@@ -471,7 +456,6 @@
   text-align: left;
   line-height: var(--body-line-height);
   letter-spacing: var(--body-letter-spacing);
-  direction: rtl;
   font-style: var(--body-font-style);
 }
 
@@ -485,7 +469,6 @@
   text-align: left;
   line-height: var(--body-bold-line-height);
   letter-spacing: var(--body-bold-letter-spacing);
-  direction: rtl;
   font-style: var(--body-bold-font-style);
 }
 
@@ -533,7 +516,6 @@
   font-size: var(--header-bold-font-size);
   line-height: var(--header-bold-line-height);
   letter-spacing: var(--header-bold-letter-spacing);
-  direction: rtl !important;
   font-style: var(--header-bold-font-style);
 }
 
@@ -545,7 +527,6 @@
   text-align: right;
   line-height: var(--sub-title-line-height);
   letter-spacing: var(--sub-title-letter-spacing);
-  direction: rtl;
   font-style: var(--sub-title-font-style);
 }
 
@@ -561,7 +542,6 @@
 .frame-27 {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   gap: 32px;
   padding: 16px 24px 24px;
   margin-left: -0.50px;
@@ -587,7 +567,6 @@
 .frame-28 {
   display: inline-flex;
   flex-direction: column;
-  align-items: flex-end;
   gap: 24px;
   flex: 0 0 auto;
 }
@@ -601,13 +580,11 @@
   font-size: 25px;
   letter-spacing: 0;
   line-height: 32.7px;
-  direction: rtl;
 }
 
 .frame-29 {
   display: inline-flex;
   flex-direction: column;
-  align-items: flex-end;
   gap: 5px;
   flex: 0 0 auto;
 }
@@ -621,7 +598,6 @@
   font-size: var(--details-font-size);
   line-height: var(--details-line-height);
   letter-spacing: var(--details-letter-spacing);
-  direction: rtl;
   font-style: var(--details-font-style);
 }
 
@@ -631,7 +607,6 @@
   font-weight: var(--body-bold-font-weight);
   color: var(--neutral-500);
   font-size: var(--body-bold-font-size);
-  text-align: right;
   letter-spacing: var(--body-bold-letter-spacing);
   line-height: var(--body-bold-line-height);
   font-style: var(--body-bold-font-style);
@@ -640,7 +615,6 @@
 .frame-30 {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   gap: 32px;
   padding: 16px 24px 24px;
   background-color: #ffffff;
@@ -661,7 +635,6 @@
   margin-bottom: -6.00px;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   gap: 24px;
   align-self: stretch;
   width: 100%;
@@ -676,13 +649,11 @@
   text-align: center;
   line-height: 50.0px;
   letter-spacing: 0;
-  direction: rtl;
 }
 
 .frame-32 {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   gap: 32px;
   padding: 16px 24px 24px;
   margin-top: -0.50px;
@@ -705,7 +676,6 @@
 .frame-33 {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   gap: 24px;
   align-self: stretch;
   width: 100%;
@@ -732,7 +702,6 @@
   font-size: var(--details-font-size);
   line-height: var(--details-line-height);
   letter-spacing: var(--details-letter-spacing);
-  direction: rtl;
   font-style: var(--details-font-style);
 }
 
@@ -762,7 +731,6 @@
   text-align: center;
   line-height: 32.4px;
   letter-spacing: 0;
-  direction: rtl;
 }
 .frame-35 {
   background-color: var(--red-500);
@@ -782,7 +750,6 @@
   text-align: left;
   line-height: var(--body-bold-line-height);
   letter-spacing: var(--body-bold-letter-spacing);
-  direction: rtl;
   font-style: var(--body-bold-font-style);
 }
 
@@ -796,7 +763,6 @@
   font-size: 37px;
   line-height: 50.0px;
   letter-spacing: 0;
-  direction: rtl;
 }
 
 .element-tif {
@@ -870,7 +836,6 @@
   text-align: center;
   line-height: 32.4px;
   letter-spacing: 0;
-  direction: rtl;
 }
 
 .text-wrapper-27 {
@@ -882,7 +847,6 @@
   text-align: center;
   line-height: 32.4px;
   letter-spacing: 0;
-  direction: rtl;
 }
 
 .text-wrapper-28 {
@@ -894,7 +858,6 @@
   text-align: center;
   line-height: 32.4px;
   letter-spacing: 0;
-  direction: rtl;
 }
 
 .text-wrapper-29 {
@@ -906,7 +869,6 @@
   text-align: center;
   line-height: 32.4px;
   letter-spacing: 0;
-  direction: rtl;
 }
 
 .text-wrapper-30 {
@@ -917,7 +879,6 @@
   text-align: center;
   line-height: 32.4px;
   letter-spacing: 0;
-  direction: rtl;
 }
 
 .group-7 {
@@ -932,7 +893,6 @@
   text-align: center;
   line-height: 50.0px;
   letter-spacing: 0;
-  direction: rtl;
 }
 
 .overlap-3 {
@@ -981,7 +941,6 @@
   margin: auto;
   line-height: 40.5px;
   letter-spacing: 0;
-  direction: rtl;
 }
 
 .frame-37 {
@@ -1036,23 +995,50 @@
 }
 
 
-@media(max-width:1190px){
 .logo{
-  order: 2 !important;
+  order: 1 !important;
 }
 .p{
+  order: 2;
+}
+
+.social-icon{
+  transition: .3s ease-in-out;
+}
+
+.social-icon:hover{
+  scale: 1.2;
+}
+
+.div-logo-footer{
+  order: 1;
+}
+.div-links-footer{
+  order: 2;
+}
+
+@media(max-width:1190px){
+.logo{
+  order: 1 !important;
+}
+.p{
+  order: 2;
+  text-align: center;
+}
+.div-logo-footer{
+  order: 2;
+}
+.div-links-footer{
   order: 1;
 }
 }
 
-@media(max-width: 967px){
-  .logo{
-    order: 1 !important;
-  }
-  .p{
-    order: 2 !important;
-    width: 100%;
-    text-align: center;
-    margin: 10px 0;
-  }
+@media (max-width: 967px) {
+.logo{
+  order: 1 !important;
+}
+.p{
+  order: 2;
+}
+
 }

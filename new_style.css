@@ -627,7 +627,6 @@
   font-size: var(--header-bold-font-size);
   line-height: var(--header-bold-line-height);
   letter-spacing: var(--header-bold-letter-spacing);
-  direction: rtl !important;
   font-style: var(--header-bold-font-style);
 }
 

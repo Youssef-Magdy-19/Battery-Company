@@ -13,17 +13,54 @@
   <script src="../script.js" defer></script>
 </head>
 
+<style>
+  .text-wrapper,.text-wrapper-4,.text-wrapper-5,.text-wrapper-6,.p,.text-wrapper-7,
+  .text-wrapper-9,.text-wrapper-11,.text-wrapper-12,.text-wrapper-13,.text-wrapper-14,
+  .text-wrapper-15,.text-wrapper-16,.text-wrapper-17,.text-wrapper-18,.text-wrapper-25,.text-wrapper-26,
+  .element-3,.element-4,.ISO,.EFB,.buttons,.production,.div-2{
+    direction: ltr !important;
+  }
+  .about-us .element{
+    right: 91px !important;
+  }
+  .overlap-5,.bg-2,.buttons,.production,.div-2,.layer{
+    transform: scaleX(-1);
+  }
+  @media(max-width:1279px){
+    .div-links-footer{
+      order: 1;
+    }
+    .div-logo-footer{
+      order: 2
+    }
+    .logo{
+      order: 1 !important;
+    }
+    .p{
+      order: 2 !important;
+    }
+  }
+  /* @media(max-width:1023px){
+    .logo{
+      order: 2 !important;
+    }
+    .p{
+      order: 1 !important;
+    }
+  } */
+</style>
+
 <body>
   <div class="about-us" data-model-id="92:2219">
     <div class="div">
 
       <div class="overlap">
         <div class="overlap-2">
-          <div class="group-2 pt-[300px] md:pt-[400px] px-[15px]">
+          <div class="group-2 px-[15px] flex items-center md:pt-[100px]">
             <img
               class="element absolute w-[240px] h-[240px] top-[600px] sm:w-[250px] sm:h-[250px] md:w-[260px] md:h-[260px] lg:h-[270px] lg:w-[270px] xl:w-[282px] xl:w-[282px]"
               src="https://c.animaapp.com/1lwzhgBv/img/472621177-608942485079693-2613384628443662180-n-1@2x.png" />
-            <div class="bg w-[90%] sm:w-[75%] md:w-[70%] lg:w-[60%] ml-auto">
+            <div class="bg w-[90%] sm:w-[75%] md:w-[70%] lg:w-[60%] ">
               <p class="text-wrapper-25">
                 A snapshot from 30 years ago marking the inauguration of the National Batteries Company factory, opened
                 by the Custodian of the Two Holy Mosques King Salman — may God protect him — when he was the Governor of
@@ -34,53 +71,51 @@
           <header class=" absolute top-[3%] w-full z-[50]">
             <div class="overlap-3 w-[92%] xl:w-[85%] m-auto ">
               <div class="group-3 px-[15px] flex gap-[.5rem] items-center justify-between">
-                <div class="group-4 hidden sm:flex items-center gap-[.5rem]">
-                  <div class="frame-11">
-                    <a href="https://store.khadamat.com.sa/" target="_blank">
-                      <div class="text-wrapper-9 px-[12px]">E-Store</div>
-                    </a>
-                  </div>
-                  <div class="overlap-group-2 flex items-center gap-[.3rem]">
-                    <img class=" vector-3" src="https://c.animaapp.com/1lwzhgBv/img/vector-11.svg" />
-                    <div class="frame-16">
-                      <div class="frame-17">
-                        <div class="text-wrapper-11">EN</div>
-                      </div>
-                      <div class="arrow">
-                        <img class="vector-4" src="https://c.animaapp.com/ukyvrevr/img/vector-5.svg" />
-                      </div>
-                    </div>
-                  </div>
+                <div class="header-logo">
+                  <a href="index.html"><img class="untitled h-[45px]" src="https://c.animaapp.com/in0BC4Oq/img/------@2x.png"
+                      alt="logo" />
+                  </a>
                 </div>
+                
                 <div class="block lg:hidden icon-menu cursor-pointer ml-[5px]">
                   <div class="w-[20px] h-[3px] bg-white mb-[5px]"></div>
                   <div class="w-[20px] h-[3px] bg-white mb-[5px]"></div>
                   <div class="w-[20px] h-[3px] bg-white mb-[5px]"></div>
                 </div>
                 <div class="navbar hidden lg:flex">
-                  <a href="https://www.tasnee.com/en/contact-us/careers">
-                    <div class="text-wrapper-11">Careers</div>
-                  </a>
-                  <a href="contact_us_en.html">
-                    <div class="text-wrapper-11">Contact Us</div>
-                  </a>
-                  <a href="new_en.html">
-                    <div class="text-wrapper-11">News</div>
-                  </a>
-                  <a href="products_en.html">
-                    <div class="text-wrapper-11">Our Products</div>
+                  <a href="index_en.html">
+                    <div class="text-wrapper-12">Home</div>
                   </a>
                   <a href="about_us_en.html">
                     <div class="text-wrapper-11">About Us</div>
                   </a>
-                  <a href="index_en.html">
-                    <div class="text-wrapper-12">Home</div>
+                  <a href="products_en.html">
+                    <div class="text-wrapper-11">Our Products</div>
+                  </a>
+                  <a href="new_en.html">
+                    <div class="text-wrapper-11">News</div>
+                  </a>
+                  <a href="contact_us_en.html">
+                    <div class="text-wrapper-11">Contact Us</div>
+                  </a>
+                  <a href="https://www.tasnee.com/en/contact-us/careers">
+                    <div class="text-wrapper-11">Careers</div>
                   </a>
                 </div>
-                <div class="header-logo">
-                  <a href="index.html"><img class="untitled h-[45px]" src="https://c.animaapp.com/in0BC4Oq/img/------@2x.png"
-                      alt="logo" />
-                  </a>
+                <div class="group-4 hidden sm:flex items-center gap-[.5rem]">
+                   <div class="overlap-group-2 flex items-center gap-[.3rem]">
+                    <div class="frame-16">
+                      <img class=" vector-3" src="https://c.animaapp.com/1lwzhgBv/img/vector-11.svg" />
+                      <div class="frame-17">
+                        <div class="text-wrapper-11">AR</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="frame-11">
+                    <a href="https://store.khadamat.com.sa/" target="_blank">
+                      <div class="text-wrapper-9 px-[12px]">E-Store</div>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -138,29 +173,26 @@
     </section>
 
     <section>
-      <div class="overlap-5 px-[15px]">
+      <div class="overlap-5 px-[15px] flex flex-col justify-center">
         <div class="overlap-6">
           <div class="overlap-7">
-            <div class="overlap-8">
-
-            </div>
-            <p class="div-2 mt-[-65px] md:mt-[-5px] flex items-center justify-start">
+            <p class="div-2 md:mt-[-5px] flex items-center justify-start">
               Wide export market presence
             </p>
-            <div class="flex gap-[1rem] items-center justify-end">
-              <div class="text-wrapper-21 mt-[40px]">Battery <br />Annually</div>
-              <div class="text-wrapper-20 mt-[40px]">2M</div>
-              <div class="text-wrapper-17 pt-[12px] md:pt-[25px] w-[300px]">Our Production Capacity</div>
+            <div class="production flex flex-wrap gap-[1rem] pt-0 items-center">
+              <div class="text-wrapper-21 md:mt-[40px]">Battery <br />Annually</div>
+              <div class="text-wrapper-20 md:mt-[40px] text-[65px] md:text-[75px] lg:text-[85px]">2M</div>
+              <div class="text-wrapper-17 pt-[12px] hidden md:block md:pt-[25px] w-[300px]">Our Production Capacity</div>
             </div>
           </div>
-          <div class="flex gap-[1rem] items-center justify-end mt-[20px] sm:mt-[40px]">
-            <div class="frame-15 cursor-pointer px-[20px] py-[10px]">
-              <p class="text-wrapper-22 cursor-pointer hover:text-blue-500">E-Store</p>
-              <img class="arrow cursor-pointer" src="https://c.animaapp.com/1lwzhgBv/img/arrow@2x.png" />
-            </div>
+          <div class="buttons flex gap-[1rem] items-center mt-[20px] sm:mt-[40px]">
             <div class="frame-14 cursor-pointer px-[20px] py-[10px]">
-              <p class="text-wrapper-19 cursor-pointer hover:text-blue-500">Our Products</p>
               <img class="arrow cursor-pointer" src="https://c.animaapp.com/1lwzhgBv/img/arrow-1@2x.png" />
+              <p class="text-wrapper-19 cursor-pointer hover:text-blue-500">Our Products</p>
+            </div>
+            <div class="frame-15 cursor-pointer px-[20px] py-[10px]">
+              <img class="arrow cursor-pointer" src="https://c.animaapp.com/1lwzhgBv/img/arrow@2x.png" />
+              <p class="text-wrapper-22 cursor-pointer hover:text-blue-500">E-Store</p>
             </div>
           </div>
         </div>
@@ -170,7 +202,8 @@
             meeting the needs and ambitions of our customers in Saudi Arabia and global markets.
           </p>
         </div>
-        <div class="layer hidden md:block md:ml-[100px] md:mt-[20px]"></div>
+
+        <div class="layer hidden md:block md:ml-[100px] md:mt-[-20px]"></div>
       </div>
     </section>
 
@@ -262,53 +295,7 @@
 
     <footer class="bg-[#0056a0]">
     <div class="w-[94%] md:w-[90%] pt-[30px] m-auto text-white">
-      <div class="flex flex-col xl:flex-row gap-[5rem] items-start">
-        <div
-          class="div-links-footer xl:mt-[0px] grid gap-[2rem] m-auto text-center md:text-start grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-
-          <div class="flex flex-col gap-[1rem]">
-            <div class="">
-              <div class="text-white font-bold">Important Links </div>
-            </div>
-            <div class="text-sm cursor-pointer hover:text-blue-500">About Us </div>
-            <div class="text-sm cursor-pointer hover:text-blue-500">Our Products</div>
-            <div class="text-sm cursor-pointer hover:text-blue-500">Website </div>
-            <div class="text-sm cursor-pointer hover:text-blue-500">News</div>
-          </div>
-
-          <div class="flex flex-col gap-[1rem] md:mt-0 m-auto lg:m-0">
-            <div class="font-bold">Privacy</div>
-            <div class="flex flex-col gap-[1rem]">
-              <div class="text-sm cursor-pointer hover:text-blue-500">Terms of Use </div>
-              <div class="text-sm cursor-pointer hover:text-blue-500">Warranty</div>
-            </div>
-          </div>
-
-          <div class="flex flex-col gap-[1rem]">
-            <div class="group">
-              <div class="font-bold">Contact Us </div>
-            </div>
-            <div class="flex items-center gap-[.5rem]">
-              <div class="">
-                <img class="" src="https://c.animaapp.com/1lwzhgBv/img/vector-1.svg" />
-              </div>
-              <p class="m-auto md:m-0 text-sm hover:text-blue-500 hover:underline">info@battariat.com</p>
-            </div>
-            <div class="flex items-center gap-[.5rem] ">
-              <div class="">
-                <img src="https://c.animaapp.com/1lwzhgBv/img/vector-2.svg" />
-              </div>
-              <span class="m-auto md:m-0 text-sm hover:text-blue-500 hover:underline">800 124 0430</span>
-            </div>
-            <div class="flex items-center gap-[.5rem]">
-              <div class="">
-                <img src="https://c.animaapp.com/1lwzhgBv/img/vector-3.svg" />
-              </div>
-              <p class="m-auto md:m-0 text-sm hover:text-blue-500 hover:underline">P.O.BOX 177, RIYADH-11383. SAUDI
-                ARABIA</p>
-            </div>
-          </div>
-        </div>
+      <div class="flex flex-col xl:flex-row gap-[2.5rem] xl:gap-[5rem] items-start">
         <div class="mb-[20px] div-logo-footer">
           <div
             class="xl:w-[400px] flex flex-col lg:flex-row xl:flex-col gap-[1rem] items-center justify-center lg:justify-between mt-[25px] xl:mt-[0] mb-[15px]">
@@ -371,6 +358,52 @@
             <a href="https://pin.it/4ZWBkLBi7" target="_blank" style="text-decoration: none; display: inline-block;">
               <img class="social-icon" src="../../assets/icons8-x 5.svg" alt="Pinterest" />
             </a>
+          </div>
+        </div>
+        <div
+          class="div-links-footer xl:mt-[0px] grid gap-[2rem] m-auto text-center md:text-start grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+
+          <div class="flex flex-col gap-[1rem]">
+            <div class="">
+              <div class="text-white font-bold">Important Links </div>
+            </div>
+            <div class="text-sm cursor-pointer hover:text-blue-500">About Us </div>
+            <div class="text-sm cursor-pointer hover:text-blue-500">Our Products</div>
+            <div class="text-sm cursor-pointer hover:text-blue-500">Website </div>
+            <div class="text-sm cursor-pointer hover:text-blue-500">News</div>
+          </div>
+
+          <div class="flex flex-col gap-[1rem] md:mt-0 m-auto lg:m-0">
+            <div class="font-bold">Privacy</div>
+            <div class="flex flex-col gap-[1rem]">
+              <div class="text-sm cursor-pointer hover:text-blue-500">Terms of Use </div>
+              <div class="text-sm cursor-pointer hover:text-blue-500">Warranty</div>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-[1rem]">
+            <div class="group">
+              <div class="font-bold">Contact Us </div>
+            </div>
+            <div class="flex items-center gap-[.5rem]">
+              <div class="">
+                <img class="" src="https://c.animaapp.com/1lwzhgBv/img/vector-1.svg" />
+              </div>
+              <p class="m-auto md:m-0 text-sm hover:text-blue-500 hover:underline">info@battariat.com</p>
+            </div>
+            <div class="flex items-center gap-[.5rem] ">
+              <div class="">
+                <img src="https://c.animaapp.com/1lwzhgBv/img/vector-2.svg" />
+              </div>
+              <span class="m-auto md:m-0 text-sm hover:text-blue-500 hover:underline">800 124 0430</span>
+            </div>
+            <div class="flex items-center gap-[.5rem]">
+              <div class="">
+                <img src="https://c.animaapp.com/1lwzhgBv/img/vector-3.svg" />
+              </div>
+              <p class="m-auto md:m-0 text-sm hover:text-blue-500 hover:underline">P.O.BOX 177, RIYADH-11383. SAUDI
+                ARABIA</p>
+            </div>
           </div>
         </div>
       </div>

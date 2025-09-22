@@ -281,7 +281,6 @@ div,p,button,a,img,span,h2,h3,h4{
 }
 
 .about-us .element {
-  left: 91px;
   object-fit: cover;
 }
 
@@ -604,9 +603,7 @@ div,p,button,a,img,span,h2,h3,h4{
   font-family: "Cairo", Helvetica;
   font-weight: 700;
   color: var(--neutral-0);
-  font-size: 86px;
   text-align: right;
-  line-height: 96px;
 }
 
 .about-us .text-wrapper-21 {
@@ -946,7 +943,7 @@ div,p,button,a,img,span,h2,h3,h4{
 }
 
 .about-us .logo{
-  order: 1 !important;
+  order: 1 ;
 }
 .about-us .p{
   order: 2;
@@ -954,7 +951,7 @@ div,p,button,a,img,span,h2,h3,h4{
 
 @media(max-width:1190px){
   .about-us .logo{
-  order: 2 !important;
+  order: 2;
 }
 .about-us .p{
   order: 1;
@@ -963,10 +960,10 @@ div,p,button,a,img,span,h2,h3,h4{
 
 @media (max-width: 967px) {
 .about-us .overlap-wrapper {
-left: 750px !important;
+left: 750px ;
 }
 .about-us .logo{
-  order: 1 !important;
+  order: 1 ;
 }
 .about-us .p{
   order: 2;
