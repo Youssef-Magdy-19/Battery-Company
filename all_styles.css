@@ -2420,7 +2420,6 @@ left: 750px !important;
     font-size: var(--details-bold-font-size);
     line-height: 1.4;
     color: var(--blue-100);
-    direction: rtl;
 }
 
 .social-card .post-stats {
